@@ -15,6 +15,7 @@ struct MailView: UIViewControllerRepresentable {
     @Binding var result: Result<MFMailComposeResult, Error>?
     
     @ObservedObject var contact = Contact.shared
+    @ObservedObject var config = Configuration.shared
     
     class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
         
@@ -60,9 +61,16 @@ struct MailView: UIViewControllerRepresentable {
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<MailView>) -> MFMailComposeViewController {
         let vc = MFMailComposeViewController()
-        vc.setMessageBody("This is Tim's message to the new Contact", isHTML: true)
-        vc.setSubject("Dear <firstname>,\n\nWe are glad that you have signed up for Village Missions, at the <event>.\n")
+        // TODO: subsitute
+        if let subject = config.subjectContents {
+            vc.setSubject(subject)
+        }
         vc.setToRecipients([contact.mail])
+        vc.setPreferredSendingEmailAddress(config.sendermail)
+        if let mail = config.mailContents {
+            vc.setMessageBody(mail, isHTML: true)
+        }
+        
         vc.mailComposeDelegate = context.coordinator
         return vc
     }

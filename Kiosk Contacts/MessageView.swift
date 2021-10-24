@@ -13,6 +13,8 @@ struct MessageView: UIViewControllerRepresentable {
     
     //typealias UIViewControllerType = MFMessageComposeViewController
     
+    @ObservedObject var config = Configuration.shared
+    
     @Environment(\.presentationMode) var presentation
     @Binding var result: Result<MessageComposeResult, Error>?
     
@@ -60,11 +62,11 @@ struct MessageView: UIViewControllerRepresentable {
     }
     
     func makeUIViewController(context: Context) -> MFMessageComposeViewController {
-        let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let fileURL = docDir.appendingPathComponent("file.txt")
-        try? "hello".write(to: fileURL, atomically: false, encoding: .utf8)
         let messageVC = MFMessageComposeViewController()
-        messageVC.body = "Hello <firstname>, Thank you for signing up at the Village Missions <event>.";
+        // TODO: substitute
+        if let message = config.messageContents {
+            messageVC.body = message;
+        }
         messageVC.recipients = [Contact.shared.phone]
         messageVC.messageComposeDelegate = context.coordinator;
         return messageVC

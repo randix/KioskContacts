@@ -5,6 +5,9 @@ image=VM Logo Color Thrive Tag.jpg
 
 event=conference
 
+enablemailsend=1
+enablemessagesend=0
+
 personaltitle=1
 firstname=1
 middlename=0
