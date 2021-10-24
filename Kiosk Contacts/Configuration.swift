@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class Configuration {
+class Configuration: ObservableObject {
     
     private init() {}
     static let shared = Configuration()
@@ -28,12 +28,35 @@ class Configuration {
     var subtitle = ""
     var background = ""
     
+    var event = ""
+    
     var mailContents: String?
     var sendermail = ""
     var sendersignature = ""
     var subjectContents: String?
     
     var messageContents: String?
+    
+    var personaltitle = false
+    var firstname = true
+    var middlename = false
+    var middleinitial = false
+    var lastname = true
+    var nameaffix = true
+
+    var addressline1 = true
+    var addressline2 = false
+    var city = true
+    var state = true
+    var zipcode = true
+    var country = false
+
+    var organization = false
+
+    var email = true
+
+    var phone = true
+    
     
     func readConfig() {
         print(#function)
@@ -59,6 +82,44 @@ class Configuration {
                     background = value
                 case "image":
                     image = value
+                case "event":
+                    event = value
+                    
+                case "personaltitle":
+                    personaltitle = value != "0"
+                case "firstname":
+                    firstname = value != "0"
+                case "middlename":
+                    middlename = value != "0"
+                case "middleinitial":
+                    middleinitial = value != "0"
+                case "lastname":
+                    lastname = value != "0"
+                case "nameaffix":
+                    nameaffix = value != "0"
+
+                case "addressline1":
+                    addressline1 = value != "0"
+                case "addressline2":
+                    addressline2 = value != "0"
+                case "city":
+                    city = value != "0"
+                case " state":
+                    state = value != "0"
+                case "zipcode":
+                    zipcode = value != "0"
+                case "country":
+                    country = value != "0"
+
+                case "organization":
+                    organization = value != "0"
+
+                case "email":
+                    email = value != "0"
+
+                case "phone":
+                    phone = value != "0"
+                    
                 default:
                     print("unknown")
                 }

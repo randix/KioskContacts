@@ -83,8 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				A4AFDA8F2725193E006D4F54 /* Kiosk_ContactsApp.swift */,
-				A4AFDAB5272593B9006D4F54 /* Configuration.swift */,
 				A4AFDA912725193E006D4F54 /* ContentView.swift */,
+				A4AFDAB5272593B9006D4F54 /* Configuration.swift */,
 				A4AFDA9F27258B84006D4F54 /* Contact.swift */,
 				A4AFDAA027258B84006D4F54 /* MailView.swift */,
 				A4AFDA9D27258B84006D4F54 /* MessageView.swift */,

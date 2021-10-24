@@ -2,3 +2,25 @@ title=Title
 subtitle=Subtitle
 background=ffffff
 image=VM Logo Color Thrive Tag.jpg
+
+event=conference
+
+personaltitle=1
+firstname=1
+middlename=0
+middleinitial=0
+lastname=1
+nameaffix=0
+
+addressline1=1
+addressline2=1
+city=1
+state=1
+zipcode=1
+country=0
+
+organization=0
+
+email=1
+
+phone=1
