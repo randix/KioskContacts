@@ -1,0 +1,5 @@
+Hi <firstname>,
+
+Thank you for signing up with <event>.
+
+Sponsor

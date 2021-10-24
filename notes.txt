@@ -1,0 +1,13 @@
+support replacing text in files
+
+<event>
+
+<firstname>
+<lastname>
+<addressline1>
+<addressline2>
+<city>
+<state>
+<zipcode>
+<email>
+<phone>

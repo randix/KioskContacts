@@ -1,0 +1,386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A4AFDA902725193E006D4F54 /* Kiosk_ContactsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDA8F2725193E006D4F54 /* Kiosk_ContactsApp.swift */; };
+		A4AFDA922725193E006D4F54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDA912725193E006D4F54 /* ContentView.swift */; };
+		A4AFDA942725193F006D4F54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDA932725193F006D4F54 /* Assets.xcassets */; };
+		A4AFDA972725193F006D4F54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDA962725193F006D4F54 /* Preview Assets.xcassets */; };
+		A4AFDAA127258B84006D4F54 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDA9D27258B84006D4F54 /* MessageView.swift */; };
+		A4AFDAA227258B84006D4F54 /* Substitutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDA9E27258B84006D4F54 /* Substitutes.swift */; };
+		A4AFDAA327258B84006D4F54 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDA9F27258B84006D4F54 /* Contact.swift */; };
+		A4AFDAA427258B84006D4F54 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDAA027258B84006D4F54 /* MailView.swift */; };
+		A4AFDAAC27258E92006D4F54 /* notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAA727258E92006D4F54 /* notes.txt */; };
+		A4AFDAAD27258E92006D4F54 /* mail.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAA827258E92006D4F54 /* mail.txt */; };
+		A4AFDAAE27258E92006D4F54 /* settings.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAA927258E92006D4F54 /* settings.txt */; };
+		A4AFDAAF27258E92006D4F54 /* message.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAAA27258E92006D4F54 /* message.txt */; };
+		A4AFDAB027258E92006D4F54 /* subject.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAAB27258E92006D4F54 /* subject.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A4AFDA8C2725193E006D4F54 /* Kiosk Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kiosk Contacts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4AFDA8F2725193E006D4F54 /* Kiosk_ContactsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kiosk_ContactsApp.swift; sourceTree = "<group>"; };
+		A4AFDA912725193E006D4F54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A4AFDA932725193F006D4F54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4AFDA962725193F006D4F54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A4AFDA9D27258B84006D4F54 /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		A4AFDA9E27258B84006D4F54 /* Substitutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Substitutes.swift; sourceTree = "<group>"; };
+		A4AFDA9F27258B84006D4F54 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		A4AFDAA027258B84006D4F54 /* MailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		A4AFDAA727258E92006D4F54 /* notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = notes.txt; sourceTree = "<group>"; };
+		A4AFDAA827258E92006D4F54 /* mail.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mail.txt; sourceTree = "<group>"; };
+		A4AFDAA927258E92006D4F54 /* settings.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = settings.txt; sourceTree = "<group>"; };
+		A4AFDAAA27258E92006D4F54 /* message.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = message.txt; sourceTree = "<group>"; };
+		A4AFDAAB27258E92006D4F54 /* subject.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = subject.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4AFDA892725193E006D4F54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A4AFDA832725193E006D4F54 = {
+			isa = PBXGroup;
+			children = (
+				A4AFDAA827258E92006D4F54 /* mail.txt */,
+				A4AFDAAA27258E92006D4F54 /* message.txt */,
+				A4AFDAA727258E92006D4F54 /* notes.txt */,
+				A4AFDAA927258E92006D4F54 /* settings.txt */,
+				A4AFDAAB27258E92006D4F54 /* subject.txt */,
+				A4AFDA8E2725193E006D4F54 /* Kiosk Contacts */,
+				A4AFDA8D2725193E006D4F54 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A4AFDA8D2725193E006D4F54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4AFDA8C2725193E006D4F54 /* Kiosk Contacts.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4AFDA8E2725193E006D4F54 /* Kiosk Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				A4AFDA8F2725193E006D4F54 /* Kiosk_ContactsApp.swift */,
+				A4AFDA912725193E006D4F54 /* ContentView.swift */,
+				A4AFDA9F27258B84006D4F54 /* Contact.swift */,
+				A4AFDAA027258B84006D4F54 /* MailView.swift */,
+				A4AFDA9D27258B84006D4F54 /* MessageView.swift */,
+				A4AFDA9E27258B84006D4F54 /* Substitutes.swift */,
+				A4AFDA932725193F006D4F54 /* Assets.xcassets */,
+				A4AFDA952725193F006D4F54 /* Preview Content */,
+			);
+			path = "Kiosk Contacts";
+			sourceTree = "<group>";
+		};
+		A4AFDA952725193F006D4F54 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A4AFDA962725193F006D4F54 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4AFDA8B2725193E006D4F54 /* Kiosk Contacts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4AFDA9A2725193F006D4F54 /* Build configuration list for PBXNativeTarget "Kiosk Contacts" */;
+			buildPhases = (
+				A4AFDA882725193E006D4F54 /* Sources */,
+				A4AFDA892725193E006D4F54 /* Frameworks */,
+				A4AFDA8A2725193E006D4F54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kiosk Contacts";
+			productName = "Kiosk Contacts";
+			productReference = A4AFDA8C2725193E006D4F54 /* Kiosk Contacts.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4AFDA842725193E006D4F54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					A4AFDA8B2725193E006D4F54 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = A4AFDA872725193E006D4F54 /* Build configuration list for PBXProject "Kiosk Contacts" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4AFDA832725193E006D4F54;
+			productRefGroup = A4AFDA8D2725193E006D4F54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4AFDA8B2725193E006D4F54 /* Kiosk Contacts */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4AFDA8A2725193E006D4F54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4AFDAAC27258E92006D4F54 /* notes.txt in Resources */,
+				A4AFDAAD27258E92006D4F54 /* mail.txt in Resources */,
+				A4AFDAAF27258E92006D4F54 /* message.txt in Resources */,
+				A4AFDA972725193F006D4F54 /* Preview Assets.xcassets in Resources */,
+				A4AFDA942725193F006D4F54 /* Assets.xcassets in Resources */,
+				A4AFDAB027258E92006D4F54 /* subject.txt in Resources */,
+				A4AFDAAE27258E92006D4F54 /* settings.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4AFDA882725193E006D4F54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4AFDAA127258B84006D4F54 /* MessageView.swift in Sources */,
+				A4AFDAA427258B84006D4F54 /* MailView.swift in Sources */,
+				A4AFDA922725193E006D4F54 /* ContentView.swift in Sources */,
+				A4AFDAA327258B84006D4F54 /* Contact.swift in Sources */,
+				A4AFDA902725193E006D4F54 /* Kiosk_ContactsApp.swift in Sources */,
+				A4AFDAA227258B84006D4F54 /* Substitutes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A4AFDA982725193F006D4F54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A4AFDA992725193F006D4F54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4AFDA9B2725193F006D4F54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Kiosk Contacts/Preview Content\"";
+				DEVELOPMENT_TEAM = J27945M9KG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.randix.Kiosk-Contacts";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A4AFDA9C2725193F006D4F54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Kiosk Contacts/Preview Content\"";
+				DEVELOPMENT_TEAM = J27945M9KG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.randix.Kiosk-Contacts";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4AFDA872725193E006D4F54 /* Build configuration list for PBXProject "Kiosk Contacts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4AFDA982725193F006D4F54 /* Debug */,
+				A4AFDA992725193F006D4F54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4AFDA9A2725193F006D4F54 /* Build configuration list for PBXNativeTarget "Kiosk Contacts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4AFDA9B2725193F006D4F54 /* Debug */,
+				A4AFDA9C2725193F006D4F54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4AFDA842725193E006D4F54 /* Project object */;
+}
