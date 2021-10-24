@@ -61,11 +61,11 @@
 			children = (
 				A4AFDAA727258E92006D4F54 /* notes.txt */,
 				A4AFDAB327259360006D4F54 /* README.md */,
+				A4AFDAA927258E92006D4F54 /* settings.txt */,
 				A4AFDAA827258E92006D4F54 /* mail.txt */,
 				A4AFDAAB27258E92006D4F54 /* subject.txt */,
 				A4AFDAB127259355006D4F54 /* sender.txt */,
 				A4AFDAAA27258E92006D4F54 /* message.txt */,
-				A4AFDAA927258E92006D4F54 /* settings.txt */,
 				A4AFDA8E2725193E006D4F54 /* Kiosk Contacts */,
 				A4AFDA8D2725193E006D4F54 /* Products */,
 			);

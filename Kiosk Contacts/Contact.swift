@@ -12,6 +12,9 @@ class Contact: ObservableObject {
     private init() {}
     static let shared = Contact()
     
+    let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+   
+    
     @Published var firstname = ""
     @Published var lastname = ""
     @Published var addressline1 = ""
