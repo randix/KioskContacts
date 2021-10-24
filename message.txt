@@ -1,1 +1,1 @@
-Hi <firstname>, thank you for signing up with <event>.
+<firstname>, thank you for signing up at <event>.

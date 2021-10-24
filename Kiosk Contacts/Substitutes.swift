@@ -9,6 +9,7 @@ import Foundation
 
 enum Substitute: String {
     case event
+    case sender
     
     case firstname
     case lastname

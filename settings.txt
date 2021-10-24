@@ -2,4 +2,3 @@ title=Title
 subtitle=Subtitle
 background=ffffff
 image=VM Logo Color Thrive Tag.jpg
-imagesize=2066 × 391

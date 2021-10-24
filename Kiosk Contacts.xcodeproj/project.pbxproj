@@ -20,6 +20,9 @@
 		A4AFDAAE27258E92006D4F54 /* settings.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAA927258E92006D4F54 /* settings.txt */; };
 		A4AFDAAF27258E92006D4F54 /* message.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAAA27258E92006D4F54 /* message.txt */; };
 		A4AFDAB027258E92006D4F54 /* subject.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAAB27258E92006D4F54 /* subject.txt */; };
+		A4AFDAB227259355006D4F54 /* sender.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAB127259355006D4F54 /* sender.txt */; };
+		A4AFDAB427259360006D4F54 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAB327259360006D4F54 /* README.md */; };
+		A4AFDAB6272593B9006D4F54 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDAB5272593B9006D4F54 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		A4AFDAA927258E92006D4F54 /* settings.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = settings.txt; sourceTree = "<group>"; };
 		A4AFDAAA27258E92006D4F54 /* message.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = message.txt; sourceTree = "<group>"; };
 		A4AFDAAB27258E92006D4F54 /* subject.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = subject.txt; sourceTree = "<group>"; };
+		A4AFDAB127259355006D4F54 /* sender.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sender.txt; sourceTree = "<group>"; };
+		A4AFDAB327259360006D4F54 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A4AFDAB5272593B9006D4F54 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,11 +59,13 @@
 		A4AFDA832725193E006D4F54 = {
 			isa = PBXGroup;
 			children = (
-				A4AFDAA827258E92006D4F54 /* mail.txt */,
-				A4AFDAAA27258E92006D4F54 /* message.txt */,
 				A4AFDAA727258E92006D4F54 /* notes.txt */,
-				A4AFDAA927258E92006D4F54 /* settings.txt */,
+				A4AFDAB327259360006D4F54 /* README.md */,
+				A4AFDAA827258E92006D4F54 /* mail.txt */,
 				A4AFDAAB27258E92006D4F54 /* subject.txt */,
+				A4AFDAB127259355006D4F54 /* sender.txt */,
+				A4AFDAAA27258E92006D4F54 /* message.txt */,
+				A4AFDAA927258E92006D4F54 /* settings.txt */,
 				A4AFDA8E2725193E006D4F54 /* Kiosk Contacts */,
 				A4AFDA8D2725193E006D4F54 /* Products */,
 			);
@@ -75,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				A4AFDA8F2725193E006D4F54 /* Kiosk_ContactsApp.swift */,
+				A4AFDAB5272593B9006D4F54 /* Configuration.swift */,
 				A4AFDA912725193E006D4F54 /* ContentView.swift */,
 				A4AFDA9F27258B84006D4F54 /* Contact.swift */,
 				A4AFDAA027258B84006D4F54 /* MailView.swift */,
@@ -153,10 +162,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4AFDAAC27258E92006D4F54 /* notes.txt in Resources */,
+				A4AFDAB227259355006D4F54 /* sender.txt in Resources */,
 				A4AFDAAD27258E92006D4F54 /* mail.txt in Resources */,
 				A4AFDAAF27258E92006D4F54 /* message.txt in Resources */,
 				A4AFDA972725193F006D4F54 /* Preview Assets.xcassets in Resources */,
 				A4AFDA942725193F006D4F54 /* Assets.xcassets in Resources */,
+				A4AFDAB427259360006D4F54 /* README.md in Resources */,
 				A4AFDAB027258E92006D4F54 /* subject.txt in Resources */,
 				A4AFDAAE27258E92006D4F54 /* settings.txt in Resources */,
 			);
@@ -171,6 +182,7 @@
 			files = (
 				A4AFDAA127258B84006D4F54 /* MessageView.swift in Sources */,
 				A4AFDAA427258B84006D4F54 /* MailView.swift in Sources */,
+				A4AFDAB6272593B9006D4F54 /* Configuration.swift in Sources */,
 				A4AFDA922725193E006D4F54 /* ContentView.swift in Sources */,
 				A4AFDAA327258B84006D4F54 /* Contact.swift in Sources */,
 				A4AFDA902725193E006D4F54 /* Kiosk_ContactsApp.swift in Sources */,
@@ -314,6 +326,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -345,6 +358,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

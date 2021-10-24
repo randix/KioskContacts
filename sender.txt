@@ -1,1 +1,2 @@
-rand@randix.net
+sendermail=rand@randix.net
+sendersignature=Rand

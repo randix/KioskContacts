@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct Kiosk_ContactsApp: App {
+    
+    init() {
+        Configuration.shared.readConfig()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
