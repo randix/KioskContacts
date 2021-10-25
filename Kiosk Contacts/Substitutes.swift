@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Substitute: String {
+enum SubstituteEnum: String {
     case event
     case sendermail
     case sendersignature
@@ -30,4 +30,12 @@ enum Substitute: String {
     
     case email
     case phone
+}
+
+class Substitute {
+    
+    static func substitute(_ text: String, _ key: String, _ replacement: String) -> String {
+        //TODO: write this
+        return ""
+    }
 }

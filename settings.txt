@@ -13,7 +13,7 @@ firstname=1
 middlename=0
 middleinitial=0
 lastname=1
-nameaffix=0
+suffix=0
 
 addressline1=1
 addressline2=1
@@ -24,6 +24,6 @@ country=0
 
 organization=0
 
-email=1
+mailaddress=1
 
 phone=1

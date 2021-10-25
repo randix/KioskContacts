@@ -74,7 +74,7 @@ class Contact: ObservableObject {
                 fileHandle.write(Data(csvline.utf8))
                 fileHandle.closeFile()
             } else {
-                let header = "title,firstname,middlename,middleinitial,lastname,nameaffix,addressline1,addressline1,city,state,zipcode,country,organization,phone,mail\n" + csvline
+                let header = "title,firstname,middlename,middleinitial,lastname,suffix,addressline1,addressline1,city,state,zipcode,country,organization,phone,mail\n" + csvline
                 try header.write(to: contactsUrl, atomically: true, encoding: .utf8)
             }
         } catch {

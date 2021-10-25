@@ -42,7 +42,7 @@ class Configuration: ObservableObject {
     var middlename = false
     var middleinitial = false
     var lastname = true
-    var nameaffix = true
+    var suffix = true
 
     var addressline1 = true
     var addressline2 = false
@@ -53,10 +53,11 @@ class Configuration: ObservableObject {
 
     var organization = false
 
-    var email = true
-
-    var phone = true
+    var mailaddress = true
+    var enablemailsend = false
     
+    var phone = true
+    var enablemessagesend = false
     
     func readConfig() {
         print(#function)
@@ -95,8 +96,8 @@ class Configuration: ObservableObject {
                     middleinitial = value != "0"
                 case "lastname":
                     lastname = value != "0"
-                case "nameaffix":
-                    nameaffix = value != "0"
+                case "suffix":
+                    suffix = value != "0"
 
                 case "addressline1":
                     addressline1 = value != "0"
@@ -104,7 +105,7 @@ class Configuration: ObservableObject {
                     addressline2 = value != "0"
                 case "city":
                     city = value != "0"
-                case " state":
+                case "state":
                     state = value != "0"
                 case "zipcode":
                     zipcode = value != "0"
@@ -114,14 +115,20 @@ class Configuration: ObservableObject {
                 case "organization":
                     organization = value != "0"
 
-                case "email":
-                    email = value != "0"
+                case "mailaddress":
+                    mailaddress = value != "0"
+                    
+                case "enablemailsend":
+                    enablemailsend = value != "0"
 
                 case "phone":
                     phone = value != "0"
                     
+                case "enablemessagesend":
+                    enablemessagesend = value != "0"
+                    
                 default:
-                    print("unknown")
+                    print("unknown: \(key) \(value)")
                 }
             }
         }
