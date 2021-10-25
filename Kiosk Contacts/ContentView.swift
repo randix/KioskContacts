@@ -6,18 +6,25 @@
 //
 
 import SwiftUI
-//import Combine
+import MessageUI
 
 struct ContentView: View {
     
     @ObservedObject var contact = Contact.shared
     @ObservedObject var config = Configuration.shared
     
+    @FocusState private var isEmailFocused: Bool
+    @FocusState private var isPhoneFocused: Bool
+    @State var key = CGFloat(0)
+    
     let fs = CGFloat(14)
     let fsTitle = CGFloat(24)
     let fsSubtitle = CGFloat(18)
     
     let leadingFrame = CGFloat(45)
+    
+    @State var showSheet = false
+    @State var resultMail: Result<MFMailComposeResult, Error>?
     
     var body: some View {
         VStack {
@@ -198,6 +205,7 @@ struct ContentView: View {
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                         .keyboardType(.numbersAndPunctuation)
+                        .focused($isPhoneFocused)
                     Spacer()
                 }
                 //.keyboardAdaptive()
@@ -213,13 +221,40 @@ struct ContentView: View {
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                         .keyboardType(.emailAddress)
+                        .focused($isEmailFocused)
+                    
                     Spacer()
                 }
-                //.keyboardAdaptive()
+                .onChange(of: isEmailFocused) { newValue in
+                    moveUp()
+                }
+                .onChange(of: isPhoneFocused) { newValue in
+                    moveUp()
+                }
             }
         }
-        
+        Button(action: {
+            showSheet = true
+            contact.add()
+            
+        }) {
+            Text("Submit")
+                .font(.system(size: fs)).bold()
+        }
+        .sheet(isPresented: $showSheet, content: { MailView(result: $resultMail) })
+        Spacer().frame(minHeight: key)
         Spacer()
+    }
+        
+    
+    func moveUp() {
+        key = 0
+        if isEmailFocused {
+            key = 200
+        }
+        if isPhoneFocused {
+            key = 140
+        }
     }
 }
 
@@ -228,3 +263,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+

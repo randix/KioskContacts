@@ -55,14 +55,15 @@ class Contact: ObservableObject {
     }
     
     func add() {
-        // TODO: consider that there might be a comma in some field
         let contactsUrl = docDir.appendingPathComponent(contactsFile)
         
         var csvline = ""
+        var first = true
         for f in [title, firstname, middlename, middleinitial, lastname, suffix,
                   addressline1, addressline2, city, state, zipcode,country,
                   organization, phone, mail] {
-            csvline = appendfield(csvline, f)
+            csvline = appendfield(first, csvline, f)
+            first = false
         }
         csvline += "\n"
         
@@ -81,9 +82,10 @@ class Contact: ObservableObject {
         }
     }
     
-    func appendfield(_ line: String, _ field: String) -> String {
+    func appendfield(_ first: Bool, _ line: String, _ field: String) -> String {
+        //print("line: '\(line)', '\(field)'")
         var newLine = line
-        if newLine != "" {
+        if first == false {
             newLine += ","
         }
         var stringContainsComma = false
