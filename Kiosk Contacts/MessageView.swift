@@ -61,9 +61,8 @@ struct MessageView: UIViewControllerRepresentable {
     
     func makeUIViewController(context: Context) -> MFMessageComposeViewController {
         let messageVC = MFMessageComposeViewController()
-        // TODO: substitute
         if let message = config.messageContents {
-            messageVC.body = message;
+            messageVC.body = Substitute.substitute(message);
         }
         messageVC.recipients = [Contact.shared.phone]
         messageVC.messageComposeDelegate = context.coordinator;

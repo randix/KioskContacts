@@ -200,6 +200,8 @@ class Configuration: ObservableObject {
         copyfileToUserDocumentDirectory(sender)
         copyfileToUserDocumentDirectory(message)
         copyfileToUserDocumentDirectory(icon)
+        copyfileToUserDocumentDirectory("README.md")
+        copyfileToUserDocumentDirectory("README.pdf")
     }
     
     func copyfileToUserDocumentDirectory(_ name: String)

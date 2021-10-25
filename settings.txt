@@ -1,9 +1,7 @@
 title=Conference East
 subtitle=VM Kiosk
-background=ffffff
-image=VM Logo Color Thrive Tag.jpg
-
 event=conference
+image=VM Logo Color Thrive Tag.jpg
 
 enablemailsend=1
 enablemessagesend=0

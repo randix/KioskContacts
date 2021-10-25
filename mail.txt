@@ -2,5 +2,5 @@ Hi <firstname>,
 
 Thank you for signing up with <event>.
 
-<sendersignature>
+- Rand
 <sendermail>

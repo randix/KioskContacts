@@ -9,10 +9,11 @@ import Foundation
 
 enum SubstituteEnum: String {
     case event
-    case sendermail
-    case sendersignature
-    
     case title
+    case subtitle
+    case image
+   
+    case personaltitle
     case firstname
     case middlename
     case middleinitial
@@ -34,8 +35,8 @@ enum SubstituteEnum: String {
 
 class Substitute {
     
-    static func substitute(_ text: String, _ key: String, _ replacement: String) -> String {
+    static func substitute(_ text: String) -> String {
         //TODO: write this
-        return ""
+        return text
     }
 }
