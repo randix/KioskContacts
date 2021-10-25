@@ -20,13 +20,14 @@ class Contact: ObservableObject {
     @Published var middlename = ""
     @Published var middleinitial = ""
     @Published var lastname = ""
-    @Published var nameaffix = ""
+    @Published var suffix = ""
     
     @Published var addressline1 = ""
     @Published var addressline2 = ""
     @Published var city = ""
     @Published var state = ""
     @Published var zipcode = ""
+    @Published var country = ""
     
     @Published var organization = ""
     @Published var phone = ""
@@ -39,13 +40,14 @@ class Contact: ObservableObject {
         middlename = ""
         middleinitial = ""
         lastname = ""
-        nameaffix = ""
+        suffix = ""
         
         addressline1 = ""
         addressline2 = ""
         city = ""
         state = ""
         zipcode = ""
+        country = ""
         
         organization = ""
         phone = ""
@@ -57,8 +59,8 @@ class Contact: ObservableObject {
         let contactsUrl = docDir.appendingPathComponent(contactsFile)
         
         var csvline = ""
-        for f in [title, firstname, middlename, middleinitial, lastname, nameaffix,
-                  addressline1, addressline2, city, state, zipcode,
+        for f in [title, firstname, middlename, middleinitial, lastname, suffix,
+                  addressline1, addressline2, city, state, zipcode,country,
                   organization, phone, mail] {
             csvline = appendfield(csvline, f)
         }
@@ -71,7 +73,7 @@ class Contact: ObservableObject {
                 fileHandle.write(Data(csvline.utf8))
                 fileHandle.closeFile()
             } else {
-                let header = "title,firstname,middlename,middleinitial,lastname,nameaffix,addressline1,addressline1,city,state,zipcode,organization,phone,mail\n" + csvline
+                let header = "title,firstname,middlename,middleinitial,lastname,nameaffix,addressline1,addressline1,city,state,zipcode,country,organization,phone,mail\n" + csvline
                 try header.write(to: contactsUrl, atomically: true, encoding: .utf8)
             }
         } catch {

@@ -11,8 +11,6 @@ import UIKit
 
 struct MessageView: UIViewControllerRepresentable {
     
-    //typealias UIViewControllerType = MFMessageComposeViewController
-    
     @ObservedObject var config = Configuration.shared
     
     @Environment(\.presentationMode) var presentation
@@ -74,4 +72,3 @@ struct MessageView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: MFMessageComposeViewController, context: Context) {
     }
 }
-
