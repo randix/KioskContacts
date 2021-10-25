@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A41079DA272637F9009D6833 /* ShowKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41079D9272637F9009D6833 /* ShowKeyboard.swift */; };
 		A4AFDA902725193E006D4F54 /* Kiosk_ContactsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDA8F2725193E006D4F54 /* Kiosk_ContactsApp.swift */; };
 		A4AFDA922725193E006D4F54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDA912725193E006D4F54 /* ContentView.swift */; };
 		A4AFDA942725193F006D4F54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDA932725193F006D4F54 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A41079D9272637F9009D6833 /* ShowKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowKeyboard.swift; sourceTree = "<group>"; };
 		A4AFDA8C2725193E006D4F54 /* Kiosk Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kiosk Contacts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AFDA8F2725193E006D4F54 /* Kiosk_ContactsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kiosk_ContactsApp.swift; sourceTree = "<group>"; };
 		A4AFDA912725193E006D4F54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				A4AFDA912725193E006D4F54 /* ContentView.swift */,
 				A4AFDAB5272593B9006D4F54 /* Configuration.swift */,
 				A4AFDA9F27258B84006D4F54 /* Contact.swift */,
+				A41079D9272637F9009D6833 /* ShowKeyboard.swift */,
 				A4AFDAA027258B84006D4F54 /* MailView.swift */,
 				A4AFDA9D27258B84006D4F54 /* MessageView.swift */,
 				A4AFDA9E27258B84006D4F54 /* Substitutes.swift */,
@@ -187,6 +190,7 @@
 				A4AFDAA327258B84006D4F54 /* Contact.swift in Sources */,
 				A4AFDA902725193E006D4F54 /* Kiosk_ContactsApp.swift in Sources */,
 				A4AFDAA227258B84006D4F54 /* Substitutes.swift in Sources */,
+				A41079DA272637F9009D6833 /* ShowKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

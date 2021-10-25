@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+//import Combine
 
 struct ContentView: View {
     
@@ -35,6 +36,7 @@ struct ContentView: View {
         VStack(alignment:.leading, spacing:2) {
             Group {
                 HStack {
+                    Spacer().frame(width:20)
                     Text("Title")
                         .font(.system(size: fs))
                         .frame(width: leadingFrame, alignment: .trailing)
@@ -43,8 +45,10 @@ struct ContentView: View {
                         .frame(width:60)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
+                    Spacer()
                 }
                 HStack {
+                    Spacer().frame(width:20)
                     Text("First")
                         .frame(width: leadingFrame, alignment: .trailing)
                         .font(.system(size: fs))
@@ -53,9 +57,11 @@ struct ContentView: View {
                         .frame(width:200)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
+                    Spacer()
                 }
                 if config.middlename {
                     HStack {
+                        Spacer().frame(width:20)
                         Text("Middle")
                             .font(.system(size: fs))
                             .frame(width: leadingFrame, alignment: .trailing)
@@ -64,10 +70,12 @@ struct ContentView: View {
                             .frame(width:200)
                             .textFieldStyle(.roundedBorder)
                             .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
+                        Spacer()
                     }
                 }
                 if config.middleinitial {
                     HStack {
+                        Spacer().frame(width:20)
                         Text("MI")
                             .font(.system(size: fs))
                             .frame(width: leadingFrame, alignment: .trailing)
@@ -76,9 +84,11 @@ struct ContentView: View {
                             .frame(width:60)
                             .textFieldStyle(.roundedBorder)
                             .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
+                        Spacer()
                     }
                 }
                 HStack {
+                    Spacer().frame(width:20)
                     Text("Last")
                         .font(.system(size: fs))
                         .frame(width: leadingFrame, alignment: .trailing)
@@ -87,9 +97,11 @@ struct ContentView: View {
                         .frame(width:200)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
+                    Spacer()
                 }
                 
                 HStack {
+                    Spacer().frame(width:20)
                     Text("Suffix")
                         .font(.system(size: fs))
                         .frame(width: leadingFrame, alignment: .trailing)
@@ -98,31 +110,46 @@ struct ContentView: View {
                         .frame(width:50)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
+                    Spacer()
                 }
             }
             Spacer().frame(height:20)
             Group {
-                Text("Address")
-                    .font(.system(size: fs))
-                TextField("address line 1", text: $contact.addressline1)
-                    .font(.system(size: fs))
-                    .frame(width:350)
-                    .textFieldStyle(.roundedBorder)
-                    .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
-                TextField("address line 2", text: $contact.addressline2)
-                    .font(.system(size: fs))
-                    .frame(width:350)
-                    .textFieldStyle(.roundedBorder)
-                    .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
+                HStack {
+                    Spacer().frame(width:20)
+                    
+                    Text("Address")
+                        .font(.system(size: fs))
+                    Spacer()
+                }
+                HStack {
+                    Spacer().frame(width:20)
+                    TextField("address line 1", text: $contact.addressline1)
+                        .font(.system(size: fs))
+                        .frame(width:350)
+                        .textFieldStyle(.roundedBorder)
+                        .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
+                    Spacer()
+                }
+                HStack {
+                    Spacer().frame(width:20)
+                    TextField("address line 2", text: $contact.addressline2)
+                        .font(.system(size: fs))
+                        .frame(width:350)
+                        .textFieldStyle(.roundedBorder)
+                        .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
+                    Spacer()
+                }
                 HStack(spacing:2) {
+                    Spacer().frame(width:20)
                     TextField("city", text: $contact.city)
                         .font(.system(size: fs))
-                        .frame(width:100)
+                        .frame(width:120)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                     TextField("state", text: $contact.state)
                         .font(.system(size: fs))
-                        .frame(width:100)
+                        .frame(width:69)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                     TextField("zip", text: $contact.zipcode)
@@ -133,23 +160,35 @@ struct ContentView: View {
                         .keyboardType(.numberPad)
                     TextField("country", text: $contact.country)
                         .font(.system(size: fs))
-                        .frame(width:70)
+                        .frame(width:90)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
+                    Spacer()
                 }
             }
             
             Group {
                 Spacer().frame(height:20)
-                Text("Organization")
-                    .font(.system(size: fs))
-                TextField("organization", text: $contact.organization)
-                    .font(.system(size: fs))
-                    .frame(width:350)
-                    .textFieldStyle(.roundedBorder)
-                    .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
+                HStack {
+                    Spacer().frame(width:20)
+                    Text("Organization")
+                        .font(.system(size: fs))
+                    Spacer()
+                }
+                HStack {
+                    Spacer().frame(width:20)
+                    
+                    TextField("organization", text: $contact.organization)
+                        .font(.system(size: fs))
+                        .frame(width:350)
+                        .textFieldStyle(.roundedBorder)
+                        .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
+                    Spacer()
+                }
+                //.keyboardAdaptive()
                 Spacer().frame(height:20)
                 HStack {
+                    Spacer().frame(width:20)
                     Text("Phone")
                         .font(.system(size: fs))
                         .frame(width: leadingFrame, alignment: .trailing)
@@ -159,9 +198,12 @@ struct ContentView: View {
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                         .keyboardType(.numbersAndPunctuation)
+                    Spacer()
                 }
+                //.keyboardAdaptive()
                 
                 HStack {
+                    Spacer().frame(width:20)
                     Text("Mail")
                         .font(.system(size: fs))
                         .frame(width: leadingFrame, alignment: .trailing)
@@ -171,9 +213,12 @@ struct ContentView: View {
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                         .keyboardType(.emailAddress)
+                    Spacer()
                 }
+                //.keyboardAdaptive()
             }
         }
+        
         Spacer()
     }
 }
