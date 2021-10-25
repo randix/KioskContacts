@@ -1,5 +1,5 @@
-title=Title
-subtitle=Subtitle
+title=Conference East
+subtitle=VM Kiosk
 background=ffffff
 image=VM Logo Color Thrive Tag.jpg
 

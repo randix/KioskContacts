@@ -18,10 +18,13 @@ struct ContentView: View {
     @State var key = CGFloat(0)
     
     let fs = CGFloat(14)
-    let fsTitle = CGFloat(20)
-    let fsSubtitle = CGFloat(16)
+    let fsTitle = CGFloat(18)
+    let fsSubtitle = CGFloat(14)
     
     let leadingFrame = CGFloat(45)
+    
+    @State var device = SizeClass.iPhonePortrait
+    let myWidth = 370
     
     @State var showSheet = false
     @State var resultMail: Result<MFMailComposeResult, Error>?
@@ -30,7 +33,11 @@ struct ContentView: View {
         VStack(spacing:2) {
             Group {
                 Spacer().frame(height:20)
-                Text("icon").frame(width:350, height: 50)
+                Image(uiImage: config.iconImage!)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width:350, height: 60)
+                Spacer().frame(height:10)
                 Text(config.title)
                     .font(.system(size: fsTitle))
                     .bold()
@@ -52,7 +59,7 @@ struct ContentView: View {
                             .frame(width:60)
                             .textFieldStyle(.roundedBorder)
                             .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
-                        Spacer()
+                        Spacer().frame(width: CGFloat(myWidth - 20 - 60) - leadingFrame)
                     }
                 }
                 HStack {
@@ -65,7 +72,7 @@ struct ContentView: View {
                         .frame(width:200)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
-                    Spacer()
+                    Spacer().frame(width: CGFloat(myWidth - 20 - 200) - leadingFrame)
                 }
                 if config.middlename {
                     HStack {
@@ -78,7 +85,7 @@ struct ContentView: View {
                             .frame(width:200)
                             .textFieldStyle(.roundedBorder)
                             .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
-                        Spacer()
+                        Spacer().frame(width: CGFloat(myWidth - 20 - 200) - leadingFrame)
                     }
                 }
                 if config.middleinitial {
@@ -92,7 +99,7 @@ struct ContentView: View {
                             .frame(width:60)
                             .textFieldStyle(.roundedBorder)
                             .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
-                        Spacer()
+                        Spacer().frame(width: CGFloat(myWidth - 20 - 60) - leadingFrame)
                     }
                 }
                 HStack {
@@ -105,7 +112,7 @@ struct ContentView: View {
                         .frame(width:200)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
-                    Spacer()
+                    Spacer().frame(width: CGFloat(myWidth - 20 - 200) - leadingFrame)
                 }
                 
                 HStack {
@@ -118,17 +125,17 @@ struct ContentView: View {
                         .frame(width:50)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
-                    Spacer()
+                    Spacer().frame(width: CGFloat(myWidth - 20 - 50) - leadingFrame)
                 }
             }
             Spacer().frame(height:10)
             Group {
                 HStack {
                     Spacer().frame(width:20)
-                    
                     Text("Address")
                         .font(.system(size: fs))
-                    Spacer()
+                        .frame(width:60, alignment: .leading)
+                    Spacer().frame(width: CGFloat(myWidth - 20 - 70))
                 }
                 HStack {
                     Spacer().frame(width:20)
@@ -137,7 +144,7 @@ struct ContentView: View {
                         .frame(width:350)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
-                    Spacer()
+                    Spacer().frame(width: CGFloat(myWidth - 20 - 350))
                 }
                 if config.addressline2 {
                     HStack {
@@ -147,7 +154,7 @@ struct ContentView: View {
                             .frame(width:350)
                             .textFieldStyle(.roundedBorder)
                             .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
-                        Spacer()
+                        Spacer().frame(width: CGFloat(myWidth - 20 - 350))
                     }
                 }
                 HStack(spacing:2) {
@@ -175,6 +182,7 @@ struct ContentView: View {
                             .textFieldStyle(.roundedBorder)
                             .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                     }
+                    //Spacer().frame(width: CGFloat(myWidth - 20 - 120 - 69 - 60 - 90))
                     Spacer()
                 }
             }
@@ -186,7 +194,8 @@ struct ContentView: View {
                         Spacer().frame(width:20)
                         Text("Organization")
                             .font(.system(size: fs))
-                        Spacer()
+                            .frame(width:100, alignment: .leading)
+                        Spacer().frame(width: CGFloat(myWidth - 20 - 350))
                     }
                     
                     HStack {
@@ -216,7 +225,6 @@ struct ContentView: View {
                         .focused($isPhoneFocused)
                     Spacer()
                 }
-                //.keyboardAdaptive()
                 
                 HStack {
                     Spacer().frame(width:20)
@@ -241,6 +249,7 @@ struct ContentView: View {
                 }
             }
         }
+        Spacer().frame(height: 20)
         Button(action: {
             showSheet = true
             contact.add()
@@ -250,6 +259,9 @@ struct ContentView: View {
                 .font(.system(size: fs+2)).bold()
         }
         .sheet(isPresented: $showSheet, content: { MailView(result: $resultMail) })
+        .onAppear(perform: {
+            device = config.sizeClass()
+        })
         Spacer().frame(minHeight: key)
         Spacer()
     }

@@ -7,6 +7,13 @@
 
 import Foundation
 import UIKit
+import SwiftUI
+
+enum SizeClass {
+    case iPhoneLandscape
+    case iPhonePortrait
+    case iPad
+}
 
 class Configuration: ObservableObject {
     
@@ -20,7 +27,7 @@ class Configuration: ObservableObject {
     let subject = "subject.txt"
     let sender = "sender.txt"
     let message = "message.txt"
-    
+    let icon = "VM Logo Color Thrive Tag.jpg"
     
     var iconImage: UIImage?
     var image = ""
@@ -59,9 +66,30 @@ class Configuration: ObservableObject {
     var phone = true
     var enablemessagesend = false
     
+    
+    func sizeClass() -> SizeClass {
+        @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
+        @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
+        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
+            return .iPhonePortrait
+        }
+        else if horizontalSizeClass == .regular && verticalSizeClass == .compact {
+            return .iPhoneLandscape
+        }
+        else if horizontalSizeClass == .regular && verticalSizeClass == .regular {
+            return .iPad
+        }
+        return .iPhonePortrait
+    }
+    
     func readConfig() {
         print(#function)
         initializeConfig()
+        
+        let iconUrl = docDir.appendingPathComponent(icon)
+        if let data = try? Data(contentsOf: iconUrl) {
+            iconImage = UIImage(data: data)!
+        }
         
         let settingsUrl = docDir.appendingPathComponent(settings)
         if let settingsContents = try? String(contentsOf: settingsUrl) {
@@ -171,6 +199,7 @@ class Configuration: ObservableObject {
         copyfileToUserDocumentDirectory(subject)
         copyfileToUserDocumentDirectory(sender)
         copyfileToUserDocumentDirectory(message)
+        copyfileToUserDocumentDirectory(icon)
     }
     
     func copyfileToUserDocumentDirectory(_ name: String)
