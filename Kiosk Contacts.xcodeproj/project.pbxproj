@@ -13,6 +13,10 @@
 		A450510D2727A26F004FC466 /* HeaderiPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450510C2727A26F004FC466 /* HeaderiPhoneView.swift */; };
 		A450510F2727A533004FC466 /* NameiPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450510E2727A533004FC466 /* NameiPhone.swift */; };
 		A45051112727A541004FC466 /* NameiPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45051102727A541004FC466 /* NameiPad.swift */; };
+		A45051132727B0D5004FC466 /* AddressiPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45051122727B0D5004FC466 /* AddressiPadView.swift */; };
+		A45051152727B0EA004FC466 /* AdressiPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45051142727B0EA004FC466 /* AdressiPhoneView.swift */; };
+		A45051172727BCE0004FC466 /* ContactiPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45051162727BCE0004FC466 /* ContactiPhoneView.swift */; };
+		A45051192727BCF0004FC466 /* ContactiPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45051182727BCF0004FC466 /* ContactiPadView.swift */; };
 		A4AFDA902725193E006D4F54 /* Kiosk_ContactsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDA8F2725193E006D4F54 /* Kiosk_ContactsApp.swift */; };
 		A4AFDA922725193E006D4F54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDA912725193E006D4F54 /* ContentView.swift */; };
 		A4AFDA942725193F006D4F54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDA932725193F006D4F54 /* Assets.xcassets */; };
@@ -38,6 +42,10 @@
 		A450510C2727A26F004FC466 /* HeaderiPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderiPhoneView.swift; sourceTree = "<group>"; };
 		A450510E2727A533004FC466 /* NameiPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameiPhone.swift; sourceTree = "<group>"; };
 		A45051102727A541004FC466 /* NameiPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameiPad.swift; sourceTree = "<group>"; };
+		A45051122727B0D5004FC466 /* AddressiPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressiPadView.swift; sourceTree = "<group>"; };
+		A45051142727B0EA004FC466 /* AdressiPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressiPhoneView.swift; sourceTree = "<group>"; };
+		A45051162727BCE0004FC466 /* ContactiPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactiPhoneView.swift; sourceTree = "<group>"; };
+		A45051182727BCF0004FC466 /* ContactiPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactiPadView.swift; sourceTree = "<group>"; };
 		A4AFDA8C2725193E006D4F54 /* Kiosk Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kiosk Contacts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AFDA8F2725193E006D4F54 /* Kiosk_ContactsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kiosk_ContactsApp.swift; sourceTree = "<group>"; };
 		A4AFDA912725193E006D4F54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +110,10 @@
 				A450510A2727A252004FC466 /* HeaderiPadView.swift */,
 				A450510E2727A533004FC466 /* NameiPhone.swift */,
 				A45051102727A541004FC466 /* NameiPad.swift */,
+				A45051142727B0EA004FC466 /* AdressiPhoneView.swift */,
+				A45051122727B0D5004FC466 /* AddressiPadView.swift */,
+				A45051162727BCE0004FC466 /* ContactiPhoneView.swift */,
+				A45051182727BCF0004FC466 /* ContactiPadView.swift */,
 				A4AFDAB5272593B9006D4F54 /* Configuration.swift */,
 				A4AFDA9F27258B84006D4F54 /* Contact.swift */,
 				A4AFDAA027258B84006D4F54 /* MailView.swift */,
@@ -204,13 +216,17 @@
 				A4AFDAA127258B84006D4F54 /* MessageView.swift in Sources */,
 				A450510B2727A252004FC466 /* HeaderiPadView.swift in Sources */,
 				A4AFDAA427258B84006D4F54 /* MailView.swift in Sources */,
+				A45051172727BCE0004FC466 /* ContactiPhoneView.swift in Sources */,
 				A4AFDAB6272593B9006D4F54 /* Configuration.swift in Sources */,
+				A45051152727B0EA004FC466 /* AdressiPhoneView.swift in Sources */,
 				A4AFDA922725193E006D4F54 /* ContentView.swift in Sources */,
 				A4AFDAA327258B84006D4F54 /* Contact.swift in Sources */,
+				A45051192727BCF0004FC466 /* ContactiPadView.swift in Sources */,
 				A450510D2727A26F004FC466 /* HeaderiPhoneView.swift in Sources */,
 				A4AFDA902725193E006D4F54 /* Kiosk_ContactsApp.swift in Sources */,
 				A4AFDAA227258B84006D4F54 /* Substitutes.swift in Sources */,
 				A450510F2727A533004FC466 /* NameiPhone.swift in Sources */,
+				A45051132727B0D5004FC466 /* AddressiPadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +364,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -380,7 +396,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

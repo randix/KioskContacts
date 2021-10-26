@@ -7,8 +7,8 @@ enablemailsend=1
 enablemessagesend=0
 
 personaltitle=1
-middlename=1
-middleinitial=1
+middlename=0
+middleinitial=0
 suffix=1
 
 addressline1=1
@@ -18,8 +18,7 @@ state=1
 zipcode=1
 country=1
 
-organization=0
+organization=1
 
 mailaddress=1
-
 phone=1

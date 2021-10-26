@@ -18,10 +18,6 @@ struct Kiosk_ContactsApp: App {
     
     init() {
         Configuration.shared.readConfig()
-        let bounds = UIScreen.main.bounds
-        let width = bounds.size.width
-        let height = bounds.size.height
-        print(width, height)
     }
     
     var body: some Scene {
