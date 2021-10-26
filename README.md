@@ -1,7 +1,7 @@
 ## Kiosk Contacts
 This app presents a configurable screen form to enter contact information.
 
-The information is saved to a file, and a welcome mail (or message) is sent to the email address entered on the form.
+The information is saved to a file, and a welcome mail (or message) is sent to the mail address entered on the form.
 
 ### Requirements
 The minimum OS is:
@@ -51,7 +51,7 @@ This file (*message.txt*) contains the body of an iMessage to be sent to the con
 
 This file (*sender.txt*) may contain a field, which can be used:
 
-- sendermail - this is the email address to be used in the From: field of the mail. The mail address must be in the list of possible sender addresses on the device.
+- sendermail - this is the mail address to be used in the From: field of the mail. The mail address must be in the list of possible sender addresses on the device.
 
 #### subject
 
@@ -131,7 +131,7 @@ The settings here (and their defaults, these should be changed appropriately) ar
 
 - mailaddress=1
 
-  Set to 1 to collect an email address.
+  Set to 1 to collect an mail address.
 
 - phone=1
 

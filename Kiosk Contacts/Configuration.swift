@@ -33,7 +33,6 @@ class Configuration: ObservableObject {
     var image = ""
     var title = ""
     var subtitle = ""
-    var background = ""
     
     var event = ""
     
@@ -107,8 +106,6 @@ class Configuration: ObservableObject {
                     title = value
                 case "subtitle":
                     subtitle = value
-                case "background":
-                    background = value
                 case "image":
                     image = value
                 case "event":
