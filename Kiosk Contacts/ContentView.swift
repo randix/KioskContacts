@@ -43,18 +43,21 @@ struct ContentView: View {
             ScrollView {
                 if iPad {
                     NameiPadView()
-                    AddressiPadView()
                     ContactiPadView()
+                    AddressiPadView()
+                   
                 } else {
                     NameiPhoneView()
-                    AddressiPhoneView()
                     ContactiPhoneView()
+                    AddressiPhoneView()
+                    
                 }
                 
                 Spacer().frame(height: 20)
                 Button(action: {
                     showSheetMail = true
                     contact.add()
+                    // TODO: dismiss keyboard
                 }) {
                     Text("Submit")
                         .font(.system(size: fs+2)).bold()

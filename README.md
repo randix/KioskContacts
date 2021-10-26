@@ -1,7 +1,7 @@
 ## Kiosk Contacts
-This app presents a configurable screen form to enter contract information.
+This app presents a configurable screen form to enter contact information.
 
-The information is saved to a file, and a welcome mail is sent to email address entered on the form.
+The information is saved to a file, and a welcome mail (or message) is sent to the email address entered on the form.
 
 ### Requirements
 The minimum OS is:
@@ -10,9 +10,9 @@ The minimum OS is:
 
 ### Access to Data
 
-This app presents a simple, configurable form, and when the **Submit** button is tapped, saves the information in the form (with no validation) to a file in the App's documents directory. The data is save to a CSV, comma separated values, file. This file can be opened with most modern spreadsheet applications, i.e. MS Excel or Apple Numbers, and processed further.
+This app presents a simple, configurable form, and when the **Submit** button is tapped, saves the information in the form (with no validation) to a file in the App's documents directory. The data is saved to a CSV, comma separated values, file. This file can be opened with most modern spreadsheet applications, i.e. MS Excel or Apple Numbers, and processed further.
 
-To find the documents for *Kiosk Contacts*, use the *Files* app. Open the *Files* app, then navigate to *On My iPad* on an iPad or *On My iPhone* on an iPhone. There will be a folder for *Kiosk Contacts*. Tap on Kiosk Contacts and you should see a display of the files there. (This is only after the app has be started at least once.)
+To find the documents for *Kiosk Contacts*, use the *Files* app. Open the *Files* app, then navigate to *On My iPad* on an iPad or *On My iPhone* on an iPhone. There will be a folder for *Kiosk Contacts*. Tap on *Kiosk Contacts* and you should see a display of the files there. (This is only after the app has be started at least once.)
 
 There will be the following files:
 
@@ -31,41 +31,41 @@ The *File* app can be used to examine or share a file. Tap and hold on a file fo
 
 ### Kiosk Contacts Files
 
-The files contain either configuration information (*settings.txt*) or text and fields. The fields will be replaced by either configuration information or by fields from the form data.
+The files contain either configuration information (*settings.txt*) or text and fields for the subject and body of the mail message or of the iMessage message. The fields will be replaced by either configuration information or by fields from the form data.
 
 The files in *Kiosk Contacts* are:
 
 #### contacts 
 
-This file is contacts.csv and contains the saved contacts from tapping the **Submit** button. This file can be directly opened in Numbers, or can be shared to be opened and processed on another device.
+This file (*contacts.csv*) contains the saved contacts from tapping the **Submit** button. This file can be directly opened in Numbers, or can be shared to be opened and processed on another device, where it might be processed with MS Excel.
 
 #### mail
 
-This file contains the body of a mail message to be sent to the contact when **Submit** is tapped. This file may be edited and certain fields entered to be replaced by text from the contact form.
+This file (*mail.txt*) contains the body of a mail message to be sent to the contact when **Submit** is tapped. This file may be edited and certain fields entered to be replaced by text from the contact form.
 
 #### message
 
-This file contains the body of an iMessage to be sent to the contact when **Submit** is tapped. This file may be edited and certain fields entered to be replaced by text from the contact form.
+This file (*message.txt*) contains the body of an iMessage to be sent to the contact when **Submit** is tapped, if so configured. This file may be edited and certain fields entered to be replaced by text from the contact form.
 
 #### sender
 
-This file may contains a field, which can be used:
+This file (*sender.txt*) may contain a field, which can be used:
 
-- sendermail - this the email address to be used in the From: field of the mail. The email address must be in the list of possible sender addresses on the device.
+- sendermail - this is the email address to be used in the From: field of the mail. The mail address must be in the list of possible sender addresses on the device.
 
 #### subject
 
-This file contains the subject of the mail message to be send to the contact when **Submit** is tapped. This file may be edited and certain fields entered to be replaced by text from the contact form.
+This file (*subject.txt*) contains the subject of the mail message to be sent to the contact when **Submit** is tapped. This file may be edited and certain fields entered to be replaced by text from the contact form.
 
 #### VM Logo Color Thrive Tag
 
-This is a sample image file to be used as a logo icon in the *Kiosk Contacts* app.
+This is a sample image file (*VM Logo Color Thrive Tag.jpg*) to be used as a logo icon in the *Kiosk Contacts* app. This file may be replaced with any JPEG or PNG file.
 
 #### settings
 
-This file contains the settings for the app. These are here rather than in the app to make it difficult for a person entering contact information to change the settings during and event.
+This file (*settings.txt*) contains the settings for the app. These are here rather than in the app itself in order to make it difficult for a person entering contact information to change the settings during and event.
 
-The settings here are (and their defaults, these should be changed appropriately):
+The settings here (and their defaults, these should be changed appropriately) are:
 
 - title=Conference East
 
@@ -81,7 +81,9 @@ The settings here are (and their defaults, these should be changed appropriately
 
 - image=VM Logo Color Thrive Tag.jpg
 
-  Demo logo.
+  Logo.
+
+  
 
 - enablemailsend=1
 
@@ -91,13 +93,13 @@ The settings here are (and their defaults, these should be changed appropriately
 
   Set to 0 or 1. If 1, then an iMessage is sent.
 
+  Only one of enablemailsend or enablemessagesend should be set to 1. If both are set, then a mail message will be preferred.
+
+  
+
 - personaltitle=1
 
   Set to 1 to collect a personal title, such as "Mr.", "Mrs.", etc.
-
-- firstname=1
-
-  Set to 1 to collect the first name.
 
 - middlename=0
 
@@ -107,33 +109,15 @@ The settings here are (and their defaults, these should be changed appropriately
 
   Set to 1 to collect the middle name.
 
-- lastname=1
-
-  Set to 1 to collect the last name.
-
 - suffix=0
 
   Set to 1 to collect a name suffix, such as "Jr.", "III", etc.
 
-- addressline1=1
-
-  Set to 1 to collect the first line of an address.
+  
 
 - addressline2=1
 
-  Set to 1 to collect the second line of an address.
-
-- city=1
-
-  Set to 1 to collect the address city.
-
-- state=1
-
-  Set to 1 to collect the address state.
-
-- zipcode=1
-
-  Set to 1 to collect the zip code or postal code.
+  Set to 1 to display and collect the second line of an address.
 
 - country=0
 
@@ -142,6 +126,8 @@ The settings here are (and their defaults, these should be changed appropriately
 - organization=0
 
   Set to 1 to collect an organization.
+
+  
 
 - mailaddress=1
 
@@ -165,25 +151,35 @@ These fields may be included in the mail, message, and subject files and will be
 ##### Contact Form Data
 
 - personaltitle
+
 - firstname
+
 - middlename
+
 - middleinitial
+
 - lastname
+
 - suffix
 
-
+  
 
 - addressline1
+
 - addressline2
+
 - city
+
 - state
+
 - zipcode
+
 - country
 
+  
 
 
 - organization
-
 
 
 - mailaddress

@@ -11,14 +11,10 @@ middlename=0
 middleinitial=0
 suffix=1
 
-addressline1=1
-addressline2=1
-city=1
-state=1
-zipcode=1
-country=1
+addressline2=0
+country=0
 
-organization=1
+organization=0
 
 mailaddress=1
 phone=1

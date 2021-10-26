@@ -20,7 +20,7 @@ struct AddressiPadView: View {
     
     var body: some View {
         VStack {
-            Spacer().frame(height:10)
+            Spacer().frame(height:20)
             
             Group {
                 HStack {
@@ -33,17 +33,18 @@ struct AddressiPadView: View {
                 
                 HStack {
                     Spacer().frame(width:20)
-                    TextField("line 1", text: $contact.addressline1)
+                    TextField("street", text: $contact.addressline1)
                         .font(.system(size: fs))
                         .frame(width:640)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                     Spacer()
                 }.frame(width:700)
+                
                 if config.addressline2 {
                     HStack {
                         Spacer().frame(width:20)
-                        TextField("line 2", text: $contact.addressline2)
+                        TextField("address line 2", text: $contact.addressline2)
                             .font(.system(size: fs))
                             .frame(width:640)
                             .textFieldStyle(.roundedBorder)
@@ -70,6 +71,7 @@ struct AddressiPadView: View {
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                         .keyboardType(.numberPad)
+                    
                     if config.country {
                         TextField("country", text: $contact.country)
                             .font(.system(size: fs))
@@ -77,6 +79,7 @@ struct AddressiPadView: View {
                             .textFieldStyle(.roundedBorder)
                             .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                     }
+                    
                     Spacer()
                 }.frame(width:700)
             }

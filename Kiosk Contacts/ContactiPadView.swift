@@ -22,24 +22,21 @@ struct ContactiPadView: View {
         
         VStack {
             
-            Spacer().frame(height:10)
+            Spacer().frame(height:20)
             
-            if config.organization {
+            if config.mailaddress {
                 HStack {
                     Spacer().frame(width:20)
-                    Text("Organization")
+                    Text("Mail")
                         .font(.system(size: fs))
-                        .frame(width:600, alignment: .leading)
-                    Spacer()
-                }.frame(width:700)
-                
-                HStack {
-                    Spacer().frame(width:20)
-                    TextField("organization", text: $contact.organization)
+                        .frame(width: leadingFrame, alignment: .trailing)
+                    TextField("", text: $contact.mail)
                         .font(.system(size: fs))
-                        .frame(width:640)
+                        .frame(width:600)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
+                        .keyboardType(.emailAddress)
+                        .autocapitalization(UITextAutocapitalizationType.none)
                     Spacer()
                 }.frame(width:700)
             }
@@ -52,7 +49,7 @@ struct ContactiPadView: View {
                         .frame(width: leadingFrame, alignment: .trailing)
                     TextField("", text: $contact.phone)
                         .font(.system(size: fs))
-                        .frame(width:400)
+                        .frame(width:600)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                         .keyboardType(.numbersAndPunctuation)
@@ -60,21 +57,21 @@ struct ContactiPadView: View {
                 }.frame(width:700)
             }
             
-            if config.mailaddress {
+            if config.organization {
                 HStack {
                     Spacer().frame(width:20)
-                    Text("Mail")
+                    Text("Organization")
                         .font(.system(size: fs))
-                        .frame(width: leadingFrame, alignment: .trailing)
-                    TextField("", text: $contact.mail)
+                        .frame(width:85, alignment: .leading)
+                    TextField("", text: $contact.organization)
                         .font(.system(size: fs))
-                        .frame(width:585)
+                        .frame(width:560)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
-                        .keyboardType(.emailAddress)
                     Spacer()
                 }.frame(width:700)
             }
+            
         }
     }
 }
