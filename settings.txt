@@ -7,18 +7,16 @@ enablemailsend=1
 enablemessagesend=0
 
 personaltitle=1
-firstname=1
-middlename=0
-middleinitial=0
-lastname=1
-suffix=0
+middlename=1
+middleinitial=1
+suffix=1
 
 addressline1=1
 addressline2=1
 city=1
 state=1
 zipcode=1
-country=0
+country=1
 
 organization=0
 

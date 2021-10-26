@@ -17,117 +17,34 @@ struct ContentView: View {
     @FocusState private var isPhoneFocused: Bool
     @State var key = CGFloat(0)
     
+    let iPad = UIScreen.main.bounds.width > 600
+    let myWidth = 375
+    
     let fs = CGFloat(14)
     let fsTitle = CGFloat(18)
     let fsSubtitle = CGFloat(14)
     
     let leadingFrame = CGFloat(45)
-    
-    @State var device = SizeClass.iPhonePortrait
-    let myWidth = 370
-    
+ 
     @State var showSheet = false
     @State var resultMail: Result<MFMailComposeResult, Error>?
     
     var body: some View {
+       
         VStack(spacing:2) {
-            Group {
-                Spacer().frame(height:20)
-                Image(uiImage: config.iconImage!)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width:350, height: 60)
-                Spacer().frame(height:10)
-                Text(config.title)
-                    .font(.system(size: fsTitle))
-                    .bold()
-                Text(config.subtitle)
-                    .font(.system(size: fsSubtitle))
-                    .bold()
-                Spacer().frame(height:20)
+            if iPad {
+                HeaderiPadView()
+            } else {
+                HeaderiPhoneView()
+            }
+
+            ScrollView {
+            if iPad {
+                NameiPadView()
+            } else {
+                NameiPhoneView()
             }
       
-            Group {
-                if config.personaltitle {
-                    HStack {
-                        Spacer().frame(width:20)
-                        Text("Title")
-                            .font(.system(size: fs))
-                            .frame(width: leadingFrame, alignment: .trailing)
-                        TextField("", text: $contact.title)
-                            .font(.system(size: fs))
-                            .frame(width:60)
-                            .textFieldStyle(.roundedBorder)
-                            .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
-                        Spacer().frame(width: CGFloat(myWidth - 20 - 60) - leadingFrame)
-                    }
-                }
-                HStack {
-                    Spacer().frame(width:20)
-                    Text("First")
-                        .frame(width: leadingFrame, alignment: .trailing)
-                        .font(.system(size: fs))
-                    TextField("", text: $contact.firstname)
-                        .font(.system(size: fs))
-                        .frame(width:200)
-                        .textFieldStyle(.roundedBorder)
-                        .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
-                    Spacer().frame(width: CGFloat(myWidth - 20 - 200) - leadingFrame)
-                }
-                if config.middlename {
-                    HStack {
-                        Spacer().frame(width:20)
-                        Text("Middle")
-                            .font(.system(size: fs))
-                            .frame(width: leadingFrame, alignment: .trailing)
-                        TextField("", text: $contact.middlename)
-                            .font(.system(size: fs))
-                            .frame(width:200)
-                            .textFieldStyle(.roundedBorder)
-                            .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
-                        Spacer().frame(width: CGFloat(myWidth - 20 - 200) - leadingFrame)
-                    }
-                }
-                if config.middleinitial {
-                    HStack {
-                        Spacer().frame(width:20)
-                        Text("MI")
-                            .font(.system(size: fs))
-                            .frame(width: leadingFrame, alignment: .trailing)
-                        TextField("", text: $contact.middleinitial)
-                            .font(.system(size: fs))
-                            .frame(width:60)
-                            .textFieldStyle(.roundedBorder)
-                            .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
-                        Spacer().frame(width: CGFloat(myWidth - 20 - 60) - leadingFrame)
-                    }
-                }
-                HStack {
-                    Spacer().frame(width:20)
-                    Text("Last")
-                        .font(.system(size: fs))
-                        .frame(width: leadingFrame, alignment: .trailing)
-                    TextField("", text: $contact.lastname)
-                        .font(.system(size: fs))
-                        .frame(width:200)
-                        .textFieldStyle(.roundedBorder)
-                        .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
-                    Spacer().frame(width: CGFloat(myWidth - 20 - 200) - leadingFrame)
-                }
-                
-                HStack {
-                    Spacer().frame(width:20)
-                    Text("Suffix")
-                        .font(.system(size: fs))
-                        .frame(width: leadingFrame, alignment: .trailing)
-                    TextField("", text: $contact.suffix)
-                        .font(.system(size: fs))
-                        .frame(width:50)
-                        .textFieldStyle(.roundedBorder)
-                        .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.6)
-                    Spacer().frame(width: CGFloat(myWidth - 20 - 50) - leadingFrame)
-                }
-            }
             Spacer().frame(height:10)
             Group {
                 HStack {
@@ -259,11 +176,10 @@ struct ContentView: View {
                 .font(.system(size: fs+2)).bold()
         }
         .sheet(isPresented: $showSheet, content: { MailView(result: $resultMail) })
-        .onAppear(perform: {
-            device = config.sizeClass()
-        })
+      
         Spacer().frame(minHeight: key)
         Spacer()
+        }
     }
         
     
