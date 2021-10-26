@@ -33,7 +33,7 @@ struct AddressiPhoneView: View {
                 
                 HStack {
                     Spacer().frame(width:20)
-                    TextField("street", text: $contact.addressline1)
+                    TextField("Street", text: $contact.addressline1)
                         .font(.system(size: fs))
                         .frame(width:330)
                         .textFieldStyle(.roundedBorder)
@@ -44,7 +44,7 @@ struct AddressiPhoneView: View {
                 if config.addressline2 {
                     HStack {
                         Spacer().frame(width:20)
-                        TextField("address line 2", text: $contact.addressline2)
+                        TextField("Address Line 2", text: $contact.addressline2)
                             .font(.system(size: fs))
                             .frame(width:330)
                             .textFieldStyle(.roundedBorder)
@@ -55,17 +55,17 @@ struct AddressiPhoneView: View {
                 
                 HStack(spacing:2) {
                     Spacer().frame(width:20)
-                    TextField("city", text: $contact.city)
+                    TextField("City", text: $contact.city)
                         .font(.system(size: fs))
                         .frame(width:100)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
-                    TextField("state", text: $contact.state)
+                    TextField("State", text: $contact.state)
                         .font(.system(size: fs))
                         .frame(width:70)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
-                    TextField("zip", text: $contact.zipcode)
+                    TextField("Zip", text: $contact.zipcode)
                         .font(.system(size: fs))
                         .frame(width:70)
                         .textFieldStyle(.roundedBorder)
@@ -73,7 +73,7 @@ struct AddressiPhoneView: View {
                         .keyboardType(.numberPad)
                     
                     if config.country {
-                        TextField("country", text: $contact.country)
+                        TextField("Country", text: $contact.country)
                             .font(.system(size: fs))
                             .frame(width:70)
                             .textFieldStyle(.roundedBorder)
