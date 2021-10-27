@@ -13,8 +13,6 @@ struct ContentView: View {
     @ObservedObject var contact = Contact.shared
     @ObservedObject var config = Configuration.shared
     
-    @FocusState private var isEmailFocused: Bool
-    @FocusState private var isPhoneFocused: Bool
     @State var key = CGFloat(0)
     
     let iPad = UIScreen.main.bounds.width > 600
@@ -64,6 +62,10 @@ struct ContentView: View {
                 }
                 
                 Spacer()
+                Spacer().frame(height: 20)
+                Text(config.app)
+                    .font(.system(size: 9))
+                Spacer().frame(height: 20)
             }
         }
         .sheet(isPresented: $showSheetMail, content: { MailView(result: $resultMail) })

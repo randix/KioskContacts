@@ -65,24 +65,22 @@ class Configuration: ObservableObject {
     var phone = true
     var enablemessagesend = false
     
+    var appName = ""
+    var appVersion = ""
+    var appBuild = ""
+    var app = ""
     
-    func sizeClass() -> SizeClass {
-        @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
-        @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
-        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-            return .iPhonePortrait
-        }
-        else if horizontalSizeClass == .regular && verticalSizeClass == .compact {
-            return .iPhoneLandscape
-        }
-        else if horizontalSizeClass == .regular && verticalSizeClass == .regular {
-            return .iPad
-        }
-        return .iPhonePortrait
-    }
+    
     
     func readConfig() {
         print(#function)
+        
+        let dictionary = Bundle.main.infoDictionary!
+        appName = dictionary["CFBundleName"] as! String
+        appVersion = dictionary["CFBundleShortVersionString"] as! String
+        appBuild = dictionary["CFBundleVersion"] as! String
+        app = "\(appName) Version \(appVersion).\(appBuild)"
+        
         initializeConfig()
         
         let iconUrl = docDir.appendingPathComponent(icon)

@@ -23,14 +23,7 @@ struct NameiPadView: View {
         
         VStack {
             Spacer().frame(height:20)
-            HStack {
-                Spacer().frame(width:10)
-                Text("Name")
-                    .font(.system(size: fs))
-                    .frame(width: leadingFrame, alignment: .trailing)
-                Spacer()
-            }.frame(width:700)
-            
+           
             HStack {
                 if config.personaltitle {
                     Group {
@@ -38,7 +31,7 @@ struct NameiPadView: View {
                         Text("Title")
                             .font(.system(size: fs))
                             .frame(width: leadingFrame, alignment: .trailing)
-                        TextField("", text: $contact.title)
+                        TextField("Mr./Mrs./etc.", text: $contact.title)
                             .font(.system(size: fs))
                             .frame(width:80)
                             .textFieldStyle(.roundedBorder)
@@ -53,7 +46,7 @@ struct NameiPadView: View {
                 Text("First")
                     .frame(width: leadingFrame, alignment: .trailing)
                     .font(.system(size: fs))
-                TextField("", text: $contact.firstname)
+                TextField("First Name", text: $contact.firstname)
                     .font(.system(size: fs))
                     .frame(width:600)
                     .textFieldStyle(.roundedBorder)
@@ -67,7 +60,7 @@ struct NameiPadView: View {
                     Text("Middle")
                         .font(.system(size: fs))
                         .frame(width: leadingFrame, alignment: .trailing)
-                    TextField("", text: $contact.middlename)
+                    TextField("Middle Name", text: $contact.middlename)
                         .font(.system(size: fs))
                         .frame(width:600)
                         .textFieldStyle(.roundedBorder)
@@ -82,7 +75,7 @@ struct NameiPadView: View {
                     Text("MI")
                         .font(.system(size: fs))
                         .frame(width: leadingFrame, alignment: .trailing)
-                    TextField("", text: $contact.middleinitial)
+                    TextField("MI", text: $contact.middleinitial)
                         .font(.system(size: fs))
                         .frame(width:80)
                         .textFieldStyle(.roundedBorder)
@@ -95,7 +88,7 @@ struct NameiPadView: View {
                 Text("Last")
                     .font(.system(size: fs))
                     .frame(width: leadingFrame, alignment: .trailing)
-                TextField("", text: $contact.lastname)
+                TextField("Last Name", text: $contact.lastname)
                     .font(.system(size: fs))
                     .frame(width:600)
                     .textFieldStyle(.roundedBorder)
@@ -111,7 +104,7 @@ struct NameiPadView: View {
                     Text("Suffix")
                         .font(.system(size: fs))
                         .frame(width: leadingFrame, alignment: .trailing)
-                    TextField("", text: $contact.suffix)
+                    TextField("Jr./etc.", text: $contact.suffix)
                         .font(.system(size: fs))
                         .frame(width:80)
                         .textFieldStyle(.roundedBorder)
