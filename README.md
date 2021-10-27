@@ -200,3 +200,5 @@ You can also copy the files to a computer, edit them there, and then copy back, 
 
 Please contact  rand@randix.net or see http://www.randix.net/KioskContacts/support.html .
 
+See the document at http://www.randix.net/KioskContacts/privacy.html for information regarding the privacy aspects of the *Kiosk Contacts* app.
+
