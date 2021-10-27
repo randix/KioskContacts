@@ -31,7 +31,7 @@ struct ContentView: View {
     
     var body: some View {
         
-        VStack(spacing:2) {
+        VStack(spacing:1) {
             if iPad {
                 HeaderiPadView()
             } else {
@@ -48,11 +48,14 @@ struct ContentView: View {
                     NameiPhoneView()
                     ContactiPhoneView()
                     AddressiPhoneView()
-                    
                 }
                 
                 Spacer().frame(height: 20)
                 Button(action: {
+                    //TODO: choose if enablemail or enablemessage
+                    // if only 1, use that
+                    // if both, if only one field, use that
+                    // if both and both fields, use mail
                     showSheetMail = true
                     contact.add()
                     // TODO: dismiss keyboard
@@ -62,10 +65,14 @@ struct ContentView: View {
                 }
                 
                 Spacer()
-                Spacer().frame(height: 20)
+                Spacer().frame(height: 10)
                 Text(config.app)
                     .font(.system(size: 9))
-                Spacer().frame(height: 20)
+                Text("For info, see: Files App: On My " + (iPad ? "iPad" : "iPhone") + " / Kiosk Contacts / README")
+                    .font(.system(size: 9))
+                Text("Copyright © 2021 Randix LLC. All rights reserved.")
+                    .font(.system(size: 9))
+                Spacer().frame(height: 10)
             }
         }
         .sheet(isPresented: $showSheetMail, content: { MailView(result: $resultMail) })
