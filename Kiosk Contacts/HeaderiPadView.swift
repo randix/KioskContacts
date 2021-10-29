@@ -9,7 +9,9 @@ import SwiftUI
 
 struct HeaderiPadView: View {
     
-    let config = Configuration.shared
+    @Binding var showConfig: Bool
+    
+    @ObservedObject var config = Configuration.shared
     
     let fs = CGFloat(14)
     let fsTitle = CGFloat(18)
@@ -20,10 +22,18 @@ struct HeaderiPadView: View {
         Group {
             Spacer().frame(height:20)
             
-            Image(uiImage: config.iconImage!)      // iPad 700 x 130, iPhone 350 x 60
-                .resizable()
-                .scaledToFit()
-                .frame(width:700, height: 120)
+            Button(action: {
+                config.setupCount += 1
+                if config.setupCount > 3 {
+                    showConfig = true
+                    config.setupCount = 0
+                }
+            }) {
+                Image(uiImage: config.iconImage!)      // iPad 700 x 130, iPhone 350 x 60
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width:700, height: 120)
+            }
             
             Spacer().frame(height:10)
             

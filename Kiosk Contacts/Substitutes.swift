@@ -14,7 +14,6 @@ class Substitute {
     
     func substitute(_ text: String) -> String {
         var replaced = text
-        print(replaced)
         replaced = replaced.replacingOccurrences(of: "<event>", with: config.event)
         replaced = replaced.replacingOccurrences(of: "<title>", with: config.title)
         replaced = replaced.replacingOccurrences(of: "<subtitle>", with: config.subtitle)

@@ -1,12 +1,12 @@
 ## Kiosk Contacts
-This app presents a configurable screen form to enter contact information.
+This app presents a configurable screen form to enter contact information. It can be run in "Kiosk" mode on an iPhone or iPad.
 
-The information is saved to a file, and a welcome mail (or message) is sent to the mail address entered on the form.
+The collected information is saved to a file, and a welcome mail (or message) is sent to the mail address (of telephone number) entered on the form.
 
 ### Requirements
 The minimum OS is:
 
- - iOS or iPadOS 15.0 or greater
+ - iOS or iPadOS 14.0 or greater
 
 ### Access to Data
 
@@ -27,7 +27,7 @@ There will be the following files:
 
 #### Files App
 
-The *File*s app can be used to examine or share a file. Tap and hold on a file for a pop-up menu of actions, among which are *Quick Look* and *Share*. Use *Share* to share a file with, for example, *Mail*.
+The *File*s app can be used to examine or share a file. Tap and hold on a file for a pop-up menu of actions, among which are *Quick Look* and *Share*. Use *Share* to share a file with, for example, *Mail*. Using this, you can send the *contacts.csv* file to another computer for processing.
 
 ### Kiosk Contacts Files
 
@@ -67,7 +67,13 @@ This is a sample image file (*VM Logo Color Thrive Tag.jpg*) to be used as a log
 
 This file (*settings.txt*) contains the settings for the app. These are here rather than in the app itself in order to make it difficult for a person entering contact information to change the settings during and event.
 
+These settings may be edited "in app". Tap on the icon/logo four times and a view will be opened in which the configuration files may be read. There you must enter the pin (which is set in the *settings.txt* file).
+
 The settings here (and their defaults, these should be changed appropriately) are:
+
+- pin=\*\*\*\*
+
+  This is the pin to be used to edit the files inside the *Kiosk Contacts* app.
 
 - title=Conference East
 
@@ -190,11 +196,26 @@ These fields may be included in the mail, message, and subject files and will be
 
 The files are intended to be edited to configure the form field settings and the contents of the messages to be sent for a particular event.
 
-Unfortunately, iOS does not include a text file editor natively from Apple on the platform. Therefore, to edit a text file directly on the iPhone or the iPad, you must download a third-party app from the Apple AppStore.
+##### *Kiosk Contacts* Editor
 
-There are many of such apps in the Apple AppStore, search for "text editor" and choose one.
+*Kiosk Contacts* has a built-in editor for its files. This is hidden from the normal user.  There are two controls to hide this:
+
+1) Tap on the logo/icon four (4) times to enter the pop-up editor view.
+2) You must enter the pin (recommended 4 or 5 digits) which is in the *settings.txt* file to be allowed to edit.
+
+You will then enter an editor view where you can select which file to edit, edit the file, and cancel or save the file.
 
 You can also copy the files to a computer, edit them there, and then copy back, with the assistance of the Files App and, for example, Mail.  Mail the files to yourself on your computer, edit them as desired, then mail them back to the iOS device, and save them from Mail back to the *Kiosk Contacts* folder.
+
+### Kiosk Mode
+
+iOS supports a kiosk mode, allowing access to a single application.  You may use this to lock access to only *Kiosk Contacts*.
+
+On iOS 15, this is activated under:
+
+**Settings** -> **Accessibility** -> **Guided Access**
+
+There you may switch Guided Access to on and set up the Passcode Settings. Read the instructions there on how to start and stop it.
 
 ### Support and Information
 

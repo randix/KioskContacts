@@ -13,8 +13,6 @@ struct ContentView: View {
     @ObservedObject var contact = Contact.shared
     @ObservedObject var config = Configuration.shared
     
-    @State var key = CGFloat(0)
-    
     let iPad = UIScreen.main.bounds.width > 600
     let myWidth = 375
     
@@ -24,6 +22,7 @@ struct ContentView: View {
     
     let leadingFrame = CGFloat(45)
     
+    @State var showConfig = false
     @State var showSheetMail = false
     @State var resultMail: Result<MFMailComposeResult, Error>?
     @State var showSheetMessage = false
@@ -32,12 +31,13 @@ struct ContentView: View {
     var body: some View {
         
         VStack(spacing:1) {
-            if iPad {
-                HeaderiPadView()
-            } else {
-                HeaderiPhoneView()
-            }
             
+            if iPad {
+                HeaderiPadView(showConfig: $showConfig)
+            } else {
+                HeaderiPhoneView(showConfig: $showConfig)
+            }
+        
             ScrollView {
                 if iPad {
                     NameiPadView()
@@ -77,5 +77,6 @@ struct ContentView: View {
         }
         .sheet(isPresented: $showSheetMail, content: { MailView(result: $resultMail) })
         .sheet(isPresented: $showSheetMessage, content: { MailView(result: $resultMail) })
+        .sheet(isPresented: $showConfig, content: { ConfigView() })
     }
 }

@@ -20,6 +20,8 @@ class Configuration: ObservableObject {
     private init() {}
     static let shared = Configuration()
     
+    @Published var setupCount = 0
+    
     let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
    
     let settings = "settings.txt"
@@ -29,51 +31,50 @@ class Configuration: ObservableObject {
     let message = "message.txt"
     let icon = "VM Logo Color Thrive Tag.jpg"
     
+    @Published var pin = ""
+    
     var iconImage: UIImage?
-    var image = ""
-    var title = ""
-    var subtitle = ""
+    @Published var image = ""
+    @Published var title = ""
+    @Published var subtitle = ""
     
-    var event = ""
+    @Published var event = ""
     
-    var mailContents: String?
-    var sendermail = ""
-    var sendersignature = ""
-    var subjectContents: String?
+    @Published var mailContents: String?
+    @Published var sendermail = ""
+    @Published var sendersignature = ""
+    @Published var subjectContents: String?
     
-    var messageContents: String?
+    @Published var messageContents: String?
     
-    var personaltitle = false
-    var firstname = true
-    var middlename = false
-    var middleinitial = false
-    var lastname = true
-    var suffix = true
+    @Published var personaltitle = false
+    @Published var firstname = true
+    @Published var middlename = false
+    @Published var middleinitial = false
+    @Published var lastname = true
+    @Published var suffix = true
 
-    var addressline1 = true
-    var addressline2 = false
-    var city = true
-    var state = true
-    var zipcode = true
-    var country = false
+    @Published var addressline1 = true
+    @Published var addressline2 = false
+    @Published var city = true
+    @Published var state = true
+    @Published var zipcode = true
+    @Published var country = false
 
-    var organization = false
+    @Published var organization = false
 
-    var mailaddress = true
-    var enablemailsend = false
+    @Published var mailaddress = true
+    @Published var enablemailsend = false
     
-    var phone = true
-    var enablemessagesend = false
+    @Published var phone = true
+    @Published var enablemessagesend = false
     
     var appName = ""
     var appVersion = ""
     var appBuild = ""
     var app = ""
     
-    
-    
     func readConfig() {
-        print(#function)
         
         let dictionary = Bundle.main.infoDictionary!
         appName = dictionary["CFBundleName"] as! String
@@ -100,6 +101,8 @@ class Configuration: ObservableObject {
                 let value = keyValue[1].trimmingCharacters(in: .whitespaces)
                 
                 switch key {
+                case "pin":
+                    pin = value
                 case "title":
                     title = value
                 case "subtitle":

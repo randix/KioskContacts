@@ -83,7 +83,6 @@ class Contact: ObservableObject {
     }
     
     func appendfield(_ first: Bool, _ line: String, _ field: String) -> String {
-        //print("line: '\(line)', '\(field)'")
         var newLine = line
         if first == false {
             newLine += ","

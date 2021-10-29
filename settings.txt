@@ -1,3 +1,5 @@
+pin=1234
+
 title=Conference East
 subtitle=VM Kiosk
 event=conference
