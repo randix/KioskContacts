@@ -52,13 +52,15 @@ struct ContentView: View {
                 
                 Spacer().frame(height: 20)
                 Button(action: {
-                    //TODO: choose if enablemail or enablemessage
-                    // if only 1, use that
-                    // if both, if only one field, use that
-                    // if both and both fields, use mail
-                    showSheetMail = true
                     contact.add()
-                    // TODO: dismiss keyboard
+                    if config.enablemailsend && contact.mail != "" {
+                        showSheetMail = true
+                    } else if config.enablemailsend && contact.mail != "" {
+                        showSheetMessage = true
+                    }
+                   
+                    // dismiss keyboard
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }) {
                     Text("Submit")
                         .font(.system(size: fs+2)).bold()

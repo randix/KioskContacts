@@ -3,7 +3,7 @@ pin=1234
 title=Conference East
 subtitle=VM Kiosk
 event=conference
-image=VM Logo Color Thrive Tag.jpg
+image=1024.png
 
 enablemailsend=1
 enablemessagesend=0

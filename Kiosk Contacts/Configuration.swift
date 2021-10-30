@@ -29,11 +29,10 @@ class Configuration: ObservableObject {
     let subject = "subject.txt"
     let sender = "sender.txt"
     let message = "message.txt"
-    let icon = "VM Logo Color Thrive Tag.jpg"
     
     @Published var pin = ""
+    @Published var iconImage: UIImage?
     
-    var iconImage: UIImage?
     @Published var image = ""
     @Published var title = ""
     @Published var subtitle = ""
@@ -84,11 +83,6 @@ class Configuration: ObservableObject {
         
         initializeConfig()
         
-        let iconUrl = docDir.appendingPathComponent(icon)
-        if let data = try? Data(contentsOf: iconUrl) {
-            iconImage = UIImage(data: data)!
-        }
-        
         let settingsUrl = docDir.appendingPathComponent(settings)
         if let settingsContents = try? String(contentsOf: settingsUrl) {
             let lines = settingsContents.split(whereSeparator: \.isNewline)
@@ -109,6 +103,11 @@ class Configuration: ObservableObject {
                     subtitle = value
                 case "image":
                     image = value
+                    print(value)
+                    let iconUrl = docDir.appendingPathComponent(image)
+                    if let data = try? Data(contentsOf: iconUrl) {
+                        iconImage = UIImage(data: data)!
+                    }
                 case "event":
                     event = value
                     
@@ -197,9 +196,11 @@ class Configuration: ObservableObject {
         copyfileToUserDocumentDirectory(subject)
         copyfileToUserDocumentDirectory(sender)
         copyfileToUserDocumentDirectory(message)
-        copyfileToUserDocumentDirectory(icon)
         copyfileToUserDocumentDirectory("README.md")
         copyfileToUserDocumentDirectory("README.pdf")
+        
+        copyfileToUserDocumentDirectory("1024.png")
+        copyfileToUserDocumentDirectory("VM Logo Color Thrive Tag.jpg")
     }
     
     func copyfileToUserDocumentDirectory(_ name: String)

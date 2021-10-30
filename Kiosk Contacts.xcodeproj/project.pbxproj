@@ -34,6 +34,7 @@
 		A4AFDAB427259360006D4F54 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAB327259360006D4F54 /* README.md */; };
 		A4AFDAB6272593B9006D4F54 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDAB5272593B9006D4F54 /* Configuration.swift */; };
 		A4E696BC272C22AA00623DA8 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E696BB272C22AA00623DA8 /* ConfigView.swift */; };
+		A4E696BE272CE39500623DA8 /* 1024.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E696BD272CE39500623DA8 /* 1024.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		A4AFDAB327259360006D4F54 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A4AFDAB5272593B9006D4F54 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		A4E696BB272C22AA00623DA8 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		A4E696BD272CE39500623DA8 /* 1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1024.png; path = AppIcons/Assets.xcassets/AppIcon.appiconset/1024.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +84,9 @@
 		A4AFDA832725193E006D4F54 = {
 			isa = PBXGroup;
 			children = (
-				A41079DD27270E5E009D6833 /* README.pdf */,
 				A4AFDAA727258E92006D4F54 /* notes.txt */,
+				A4E696BD272CE39500623DA8 /* 1024.png */,
+				A41079DD27270E5E009D6833 /* README.pdf */,
 				A4AFDAB327259360006D4F54 /* README.md */,
 				A4AFDAA927258E92006D4F54 /* settings.txt */,
 				A4AFDAA827258E92006D4F54 /* mail.txt */,
@@ -202,6 +205,7 @@
 				A4AFDAAD27258E92006D4F54 /* mail.txt in Resources */,
 				A4AFDAAF27258E92006D4F54 /* message.txt in Resources */,
 				A41079DE27270E5E009D6833 /* README.pdf in Resources */,
+				A4E696BE272CE39500623DA8 /* 1024.png in Resources */,
 				A4AFDA972725193F006D4F54 /* Preview Assets.xcassets in Resources */,
 				A4AFDA942725193F006D4F54 /* Assets.xcassets in Resources */,
 				A4AFDAB427259360006D4F54 /* README.md in Resources */,
