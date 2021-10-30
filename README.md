@@ -16,14 +16,14 @@ To find the documents for *Kiosk Contacts*, use the Apple *Files* app. Open the 
 
 There will be the following files:
 
+- 1024 (.png)
 - contacts (.csv)
+- mail (.txt)
 - message (.txt)
-- sender (.txt)
-- settings (.txt)
-- subject (.txt)
-- VM Logo Color Thrive Tag (.jpg)
 - README (.pdf)
 - README (.md)
+- settings (.txt)
+- VM Logo Color Thrive Tag (.jpg)
 
 #### Files App
 
@@ -45,23 +45,25 @@ This file (*contacts.csv*) contains the saved contacts from tapping the **Submit
 
 #### mail
 
-This file (*mail.txt*) contains the body of a mail message to be sent to the contact when **Submit** is tapped. This file may be edited and certain fields entered to be replaced by text from the contact form.
+This file (*mail.txt*) contains the "from:" and "subject:" fields and the body of a mail message to be sent to the contact when **Submit** is tapped. This file may be edited and certain fields entered to be replaced by text from the contact form.
+
+The "from:" address must be in the list of possible sender addresses on the device to be used, otherwise Mail will use a From: address present on the device.
+
+The "subject:" is the Subject: of the mail message.
+
+The "---" should be left in place as a separator line.
 
 #### message
 
 This file (*message.txt*) contains the body of an iMessage to be sent to the contact when **Submit** is tapped, if so configured. This file may be edited and certain fields entered to be replaced by text from the contact form.
 
-#### sender
+#### 1024
 
-This file (*sender.txt*) may contains the sendermail mail address, which is used as the mail address in the From: field of the mail. The mail address must be in the list of possible sender addresses on the device to be used, otherwise Mail will use a From: address present on the device.
-
-#### subject
-
-This file (*subject.txt*) contains the subject of the mail message to be sent to the contact when **Submit** is tapped. This file may be edited and fields entered to be replaced by text from the contact form.
+This is the default image file (*1024.png*) to be used as a logo icon in the *Kiosk Contacts* app. This file may be replaced with any JPEG or PNG file.
 
 #### VM Logo Color Thrive Tag
 
-This is a sample image file (*VM Logo Color Thrive Tag.jpg*) to be used as a logo icon in the *Kiosk Contacts* app. This file may be replaced with any JPEG or PNG file.
+This is a sample image file (*VM Logo Color Thrive Tag.jpg*).
 
 #### settings
 
@@ -75,7 +77,7 @@ The settings here (and their defaults, these should be changed appropriately) ar
 
   This is the pin to be used to edit the files inside the *Kiosk Contacts* app.
 
-- title=Conference East
+- kiosktitle=Conference East
 
   Sets the title of the app.
 
@@ -93,21 +95,21 @@ The settings here (and their defaults, these should be changed appropriately) ar
 
 
 
-- enablemailsend=1
+- mailsend=1
 
   Set to 0 or 1. If 1, then a mail is sent.
 
-- enablemessagesend=0
+- messagesend=0
 
   Set to 0 or 1. If 1, then an iMessage is sent.
 
-  Only one of enablemailsend or enablemessagesend should be set to 1. If both are set, then a mail message will be preferred. If both are set, and only one of the fields in the form are filled out, then that is preferred.
+  Only one of mailsend or messagesend should be set to 1. If both are set, then a mail message will be preferred. If both are set, and only one of the fields in the form are filled out, then that is preferred.
 
 
 
-- personaltitle=1
+- title=1
 
-  Set to 1 to collect a personal title, such as "Mr.", "Mrs.", etc.
+  Set to 1 to collect a title, such as "Mr.", "Mrs.", etc.
 
 - middlename=0
 
@@ -151,13 +153,13 @@ These fields may be included in the mail, message, and subject files and will be
 
 ##### Settings
 
-- title
+- kiosktitle
 - subtitle
 - event
 
 ##### Contact Form Data
 
-- personaltitle
+- title
 
 - firstname
 

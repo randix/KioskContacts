@@ -37,7 +37,7 @@ struct HeaderiPhoneView: View {
             
             Spacer().frame(height:10)
             
-            Text(config.title)
+            Text(config.kiosktitle)
                 .font(.system(size: 18))
                 .bold()
             

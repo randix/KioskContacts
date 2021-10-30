@@ -23,7 +23,7 @@ struct NameiPhoneView: View {
         Group {
             Spacer().frame(height:10)
             
-            if config.personaltitle {
+            if config.title {
                 HStack {
                     Spacer().frame(width:20)
                     Text("Title")

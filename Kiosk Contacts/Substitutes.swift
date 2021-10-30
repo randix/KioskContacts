@@ -15,10 +15,10 @@ class Substitute {
     func substitute(_ text: String) -> String {
         var replaced = text
         replaced = replaced.replacingOccurrences(of: "<event>", with: config.event)
-        replaced = replaced.replacingOccurrences(of: "<title>", with: config.title)
+        replaced = replaced.replacingOccurrences(of: "<kiosktitle>", with: config.kiosktitle)
         replaced = replaced.replacingOccurrences(of: "<subtitle>", with: config.subtitle)
         
-        replaced = replaced.replacingOccurrences(of: "<personaltitle>", with: contact.title)
+        replaced = replaced.replacingOccurrences(of: "<title>", with: contact.title)
         replaced = replaced.replacingOccurrences(of: "<firstname>", with: contact.firstname)
         replaced = replaced.replacingOccurrences(of: "<middleinitial>", with: contact.middleinitial)
         replaced = replaced.replacingOccurrences(of: "<middlename>", with: contact.middlename)

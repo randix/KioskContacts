@@ -37,7 +37,7 @@ struct HeaderiPadView: View {
             
             Spacer().frame(height:10)
             
-            Text(config.title)
+            Text(config.kiosktitle)
                 .font(.system(size: 20))
                 .bold()
             

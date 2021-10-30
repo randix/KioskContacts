@@ -63,16 +63,10 @@ struct MailView: UIViewControllerRepresentable {
         let vc = MFMailComposeViewController()
 
         let sub = Substitute()
-        if let subject = config.subjectContents {
-           
-            vc.setSubject(sub.substitute(subject))
-        }
+        vc.setSubject(sub.substitute(config.subject))
         vc.setToRecipients([contact.mail])
-        vc.setPreferredSendingEmailAddress(config.sendermail)
-        if let mail = config.mailContents {
-            vc.setMessageBody(sub.substitute(mail), isHTML: true)
-        }
-        
+        vc.setPreferredSendingEmailAddress(config.from)
+        vc.setMessageBody(sub.substitute(config.mailContents), isHTML: false)
         vc.mailComposeDelegate = context.coordinator
         return vc
     }

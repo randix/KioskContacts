@@ -1,1 +1,0 @@
-sendermail=rand@randix.net

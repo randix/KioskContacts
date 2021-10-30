@@ -1,14 +1,14 @@
 pin=1234
 
-title=Conference East
+kiosktitle=Conference East
 subtitle=VM Kiosk
 event=conference
 image=1024.png
 
-enablemailsend=1
-enablemessagesend=0
+mailsend=1
+messagesend=0
 
-personaltitle=1
+title=1
 middlename=0
 middleinitial=0
 suffix=1

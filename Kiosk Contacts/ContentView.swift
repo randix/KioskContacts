@@ -53,12 +53,11 @@ struct ContentView: View {
                 Spacer().frame(height: 20)
                 Button(action: {
                     contact.add()
-                    if config.enablemailsend && contact.mail != "" {
+                    if config.mailsend && contact.mail != "" {
                         showSheetMail = true
-                    } else if config.enablemailsend && contact.mail != "" {
+                    } else if config.messagesend && contact.phone != "" {
                         showSheetMessage = true
                     }
-                   
                     // dismiss keyboard
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }) {

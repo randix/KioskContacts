@@ -1,6 +1,9 @@
+from: rand@randix.net
+subject: Signup with <event>
+---
 Hi <firstname>,
 
 Thank you for signing up with <event>.
 
 - Rand
-<sendermail>
+

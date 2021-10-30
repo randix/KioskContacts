@@ -16,8 +16,6 @@ struct ConfigView: View {
     let files = [
         "settings.txt",
         "mail.txt",
-        "subject.txt",
-        "sender.txt",
         "message.txt"
     ]
     @State var fileSelector = 0

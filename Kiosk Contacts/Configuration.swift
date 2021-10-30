@@ -26,27 +26,24 @@ class Configuration: ObservableObject {
    
     let settings = "settings.txt"
     let mail = "mail.txt"
-    let subject = "subject.txt"
-    let sender = "sender.txt"
     let message = "message.txt"
     
     @Published var pin = ""
     @Published var iconImage: UIImage?
     
     @Published var image = ""
-    @Published var title = ""
+    @Published var kiosktitle = ""
     @Published var subtitle = ""
     
     @Published var event = ""
     
-    @Published var mailContents: String?
-    @Published var sendermail = ""
-    @Published var sendersignature = ""
-    @Published var subjectContents: String?
+    @Published var mailContents = ""
+    @Published var from = ""
+    @Published var subject = ""
     
-    @Published var messageContents: String?
+    @Published var messageContents = ""
     
-    @Published var personaltitle = false
+    @Published var title = false
     @Published var firstname = true
     @Published var middlename = false
     @Published var middleinitial = false
@@ -63,10 +60,10 @@ class Configuration: ObservableObject {
     @Published var organization = false
 
     @Published var mailaddress = true
-    @Published var enablemailsend = false
+    @Published var mailsend = false
     
     @Published var phone = true
-    @Published var enablemessagesend = false
+    @Published var messagesend = false
     
     var appName = ""
     var appVersion = ""
@@ -97,13 +94,12 @@ class Configuration: ObservableObject {
                 switch key {
                 case "pin":
                     pin = value
-                case "title":
-                    title = value
+                case "kiosktitle":
+                    kiosktitle = value
                 case "subtitle":
                     subtitle = value
                 case "image":
                     image = value
-                    print(value)
                     let iconUrl = docDir.appendingPathComponent(image)
                     if let data = try? Data(contentsOf: iconUrl) {
                         iconImage = UIImage(data: data)!
@@ -111,8 +107,8 @@ class Configuration: ObservableObject {
                 case "event":
                     event = value
                     
-                case "personaltitle":
-                    personaltitle = value != "0"
+                case "title":
+                    title = value != "0"
                 case "firstname":
                     firstname = value != "0"
                 case "middlename":
@@ -143,14 +139,14 @@ class Configuration: ObservableObject {
                 case "mailaddress":
                     mailaddress = value != "0"
                     
-                case "enablemailsend":
-                    enablemailsend = value != "0"
+                case "mailsend":
+                    mailsend = value != "0"
 
                 case "phone":
                     phone = value != "0"
                     
-                case "enablemessagesend":
-                    enablemessagesend = value != "0"
+                case "messagesend":
+                    messagesend = value != "0"
                     
                 default:
                     print("unknown: \(key) \(value)")
@@ -159,42 +155,48 @@ class Configuration: ObservableObject {
         }
         
         let mailUrl = docDir.appendingPathComponent(mail)
-        mailContents = try? String(contentsOf: mailUrl)
-        
-        let subjectUrl = docDir.appendingPathComponent(subject)
-        subjectContents = try? String(contentsOf: subjectUrl)
-        
-        let senderUrl = docDir.appendingPathComponent(sender)
-        if let senderContents = try? String(contentsOf: senderUrl) {
-            let lines = senderContents.split(whereSeparator: \.isNewline)
-            for line in lines {
-                let keyValue = line.split(separator: "=")
-                if keyValue.count != 2 {
-                    continue
+        from = ""
+        subject = ""
+        mailContents = ""
+        do {
+            let mailFileContents = try String(contentsOf: mailUrl)
+            let lines = mailFileContents.split(omittingEmptySubsequences: false, whereSeparator: \.isNewline)
+            if lines.count > 2 {
+                let l1 = lines[0].trimmingCharacters(in: .whitespaces)
+                let l2 = lines[1].trimmingCharacters(in: .whitespaces)
+                for l in [l1, l2] {
+                    let keyValue = l.split(separator: ":")
+                    if keyValue.count != 2 {
+                        continue
+                    }
+                    let key = keyValue[0].trimmingCharacters(in: .whitespaces)
+                    let value = keyValue[1].trimmingCharacters(in: .whitespaces)
+                    switch key {
+                    case "from":
+                        from = value
+                    case "subject":
+                        subject = value
+                    default:
+                        print("unknown: \(key) \(value)")
+                    }
                 }
-                let key = keyValue[0].trimmingCharacters(in: .whitespaces)
-                let value = keyValue[1].trimmingCharacters(in: .whitespaces)
-                
-                switch key {
-                case "sendermail":
-                    sendermail = value
-                case "sendersignature":
-                    sendersignature = value
-                default:
-                    print("unknown")
+                for line in  lines[3..<lines.count] {
+                    mailContents += line + "\n"
                 }
             }
-        }
+            
+        } catch {}
         
         let messageUrl = docDir.appendingPathComponent(message)
-        messageContents = try? String(contentsOf: messageUrl)
+        messageContents = ""
+        do {
+            messageContents = try String(contentsOf: messageUrl)
+        } catch {}
     }
 
     func initializeConfig() {
         copyfileToUserDocumentDirectory(settings)
         copyfileToUserDocumentDirectory(mail)
-        copyfileToUserDocumentDirectory(subject)
-        copyfileToUserDocumentDirectory(sender)
         copyfileToUserDocumentDirectory(message)
         copyfileToUserDocumentDirectory("README.md")
         copyfileToUserDocumentDirectory("README.pdf")
