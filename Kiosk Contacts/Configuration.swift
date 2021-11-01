@@ -79,6 +79,7 @@ class Configuration: ObservableObject {
         app = "\(appName) Version \(appVersion).\(appBuild)"
         
         initializeConfig()
+        print(docDir)
         
         let settingsUrl = docDir.appendingPathComponent(settings)
         if let settingsContents = try? String(contentsOf: settingsUrl) {

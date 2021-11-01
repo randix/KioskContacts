@@ -25,7 +25,7 @@ struct ConfigView: View {
     
     @State var textOriginal = ""
     @State var text = ""
-    @State var color = Color.gray
+    @State var modified = false
     
     var body: some View {
         VStack {
@@ -46,31 +46,32 @@ struct ConfigView: View {
                     Text("Editor").font(.system(size: 20)).bold()
                     Spacer()
                 }
-                Spacer().frame(height:20)
+                Spacer().frame(height:10)
             }
             
-            HStack {
-                Spacer()
-                Image(systemName: "123.rectangle").font(.system(size: 18)).frame(width: 30)
-                SecureField("pin", text:$pin)
-                    .font(.system(size: 18))
-                    .frame(width:70)
-                    .textFieldStyle(.roundedBorder)
-                    .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
-                    .keyboardType(.numberPad)
-                Button(action: {
-                    master = config.pin == pin
-                    pin = ""
-                    if master == false {
-                        presentationMode.wrappedValue.dismiss()
-                    }
-                }) {
-                    Image(systemName: "checkmark").font(.system(size: 18)).frame(width: 30)
+            if !master {
+                HStack {
+                    Spacer()
+                    Image(systemName: "123.rectangle").font(.system(size: 18)).frame(width: 30)
+                    SecureField("pin", text:$pin)
+                        .font(.system(size: 18))
+                        .frame(width:70)
+                        .textFieldStyle(.roundedBorder)
+                        .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
+                        .keyboardType(.numberPad)
+                        .onChange(of: pin, perform: { _ in
+                            if !master {
+                                master = config.pin == pin
+                                if master {
+                                    pin = ""
+                                }
+                            }
+                        })
+                    Spacer()
                 }
-                Spacer()
-            }
-            
-            if master {
+                
+            } else {
+                
                 HStack {
                     Spacer()
                     Text("Edit File:")
@@ -88,32 +89,10 @@ struct ConfigView: View {
                         }
                     Spacer()
                 }
-                Spacer().frame(height: 20)
+                Spacer().frame(height: 10)
                 
-                HStack {
-                    Spacer().frame(width:30)
-                    Spacer()
-                    Button(action: {
-                        presentationMode.wrappedValue.dismiss()
-                    }) {
-                        Text("Cancel")
-                            .font(.system(size:16))
-                    }
-                    Spacer().frame(width:50)
-                    Button(action: {
-                        saveFile()
-                        config.readConfig()
-                        color = Color.gray
-                    }) {
-                        Text("Save")
-                            .font(.system(size:16))
-                    }
-                    Spacer()
-                    Text("Modified")
-                        .font(.system(size:16))
-                        .foregroundColor(color)
-                    Spacer().frame(width:30)
-                }
+                
+                
                 HStack {
                     Spacer().frame(width:20)
                     TextEditor(text: $text)
@@ -121,12 +100,52 @@ struct ConfigView: View {
                         .border(.black)
                         .onChange(of: text) { _ in
                             if text == textOriginal {
-                                color = Color.gray
+                                modified = false
                             } else {
-                                color = Color.red
+                                modified = true
                             }
                         }
                     Spacer().frame(width:20)
+                }
+                
+                HStack {
+                    Spacer().frame(width:60)
+                    Spacer()
+                    
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
+                        VStack {
+                            Image(systemName: "arrow.uturn.backward").font(.system(size:24))
+                            Text("Cancel").font(.system(size:12))
+                        }
+                    }
+                    Spacer().frame(width:40)
+                    Button(action: {
+                        saveFile()
+                        config.readConfig()
+                        modified = false
+                    }) {
+                        VStack {
+                            Image(systemName: "square.and.arrow.down").font(.system(size:24))
+                            if modified {
+                                Text("Save").font(.system(size:12)).bold()
+                            } else {
+                                Text("Save").font(.system(size:12))
+                            }
+                        }
+                    }
+                    .disabled(!modified)
+                    
+                    Spacer()
+                    Button(action: {
+                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    }) {
+                        VStack {
+                            Image(systemName: "keyboard.chevron.compact.down").font(.system(size:20))
+                        }
+                    }
+                    Spacer().frame(width:30)
                 }
             }
             
@@ -134,6 +153,7 @@ struct ConfigView: View {
         }
         .onAppear(perform: {
             loadFile()
+            master = false
         })
     }
     

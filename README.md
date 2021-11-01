@@ -1,7 +1,7 @@
 ## Kiosk Contacts
 This app presents a configurable screen form to enter contact information. It can be run in "Kiosk" mode on an iPhone or iPad.
 
-The collected information is saved to a file, and a welcome mail (or message) is sent to the mail address (of telephone number) entered on the form.
+The app saves collected information to a file, and initiates the sending of a welcome mail or message to the mail address or telephone number entered on the form.
 
 ### Requirements
 The minimum OS is:
@@ -10,9 +10,9 @@ The minimum OS is:
 
 ### Access to Data
 
-This app presents a simple, configurable form, when the **Submit** button is tapped, saves the information in the form (with no validation) to a file in the app's documents directory. The data is saved to a CSV, comma separated values, file, *contacts.csv*. This file can be opened with most modern spreadsheet applications, i.e. MS Excel or Apple Numbers, and processed further.
+This app presents a simple, configurable contact information form, when the **Submit** button is tapped, it saves the information in the form to a file in the app's documents directory. The collected information is not verified. The data is saved to a comma separated values, CSV, file, named *contacts.csv*. Modern spreadsheet applications, i.e. MS Excel or Apple Numbers, can open this file for further processing.
 
-To find the documents for *Kiosk Contacts*, use the Apple *Files* app. Open the *Files* app, then navigate to *On My iPad* on an iPad or *On My iPhone* on an iPhone. There will be a folder for *Kiosk Contacts*. Tap on *Kiosk Contacts* and you should see a display of the files there. (You will only see the files after the app has been started at least once.)
+To find the documents for *Kiosk Contacts*, use the Apple *Files* app. Open the *Files* app, then navigate to *On My iPad* on an iPad or *On My iPhone* on an iPhone. There will be a folder for *Kiosk Contacts*. Tap on *Kiosk Contacts* and you should see a display of the files there. You will only see the files after the app has been started at least once.
 
 There will be the following files:
 
@@ -31,9 +31,9 @@ The *File*s app can be used to examine or share a file. Tap and hold on a file f
 
 ### Kiosk Contacts Files
 
-The files contain either configuration information (*settings.txt*) or text and fields for the subject and body of the mail message or of the iMessage message. The fields will be replaced by either configuration information or by fields from the form data.
+The files  in the *Kiosk Contacts* folder contain either configuration information, i.e. *settings.txt*, or text and fields for the subject and body of the mail message or of the iMessage message. The fields will be replaced by either configuration information or by fields from the form data. This is described below in the Substitions section.
 
-The files in *Kiosk Contacts* folder are:
+The files in the *Kiosk Contacts* folder are:
 
 #### README
 
@@ -41,35 +41,35 @@ This is this document which describes and informs the usage of *Kiosk Contacts*.
 
 #### contacts
 
-This file (*contacts.csv*) contains the saved contacts from tapping the **Submit** button. This file can be directly opened in Numbers, or can be shared to be opened and processed on another device, where it might be processed with, for example, MS Excel or Apple Numbers.
+This file *contacts.csv* contains the saved contacts from tapping the **Submit** button. Apple *Numbers* can directly open this file, or this file can be shared to be opened and processed on another device, where it might be processed with, for example, MS Excel.
 
 #### mail
 
-This file (*mail.txt*) contains the "from:" and "subject:" fields and the body of a mail message to be sent to the contact when **Submit** is tapped. This file may be edited and certain fields entered to be replaced by text from the contact form.
+This file *mail.txt* contains the "from:" and "subject:" fields and the body of a mail message to be sent to the contact when **Submit** is tapped. This file may be edited and certain fields entered to be replaced by text from the contact form.
 
 The "from:" address must be in the list of possible sender addresses on the device to be used, otherwise Mail will use a From: address present on the device.
 
 The "subject:" is the Subject: of the mail message.
 
-The "---" should be left in place as a separator line.
+The "---" must be left in place as a separator line.
 
 #### message
 
-This file (*message.txt*) contains the body of an iMessage to be sent to the contact when **Submit** is tapped, if so configured. This file may be edited and certain fields entered to be replaced by text from the contact form.
+This file *message.txt* contains the body of an iMessage to be sent to the contact when **Submit** is tapped, if so configured. This file may be edited and certain fields entered to be replaced by text from the contact form.
 
 #### 1024
 
-This is the default image file (*1024.png*) to be used as a logo icon in the *Kiosk Contacts* app. This file may be replaced with any JPEG or PNG file.
+*1024.png* is the default image file used as a logo icon in the *Kiosk Contacts* app. You can add most any image file, i.e. JPEG or PNG file, to be used as your own icon or logo in the app.
 
 #### VM Logo Color Thrive Tag
 
-This is a sample image file (*VM Logo Color Thrive Tag.jpg*).
+This is another sample image file, *VM Logo Color Thrive Tag.jpg*.
 
 #### settings
 
-This file (*settings.txt*) contains the settings for the app. These are here rather than in the app itself in order to make it difficult for a person entering contact information to change the settings during and event.
+This file *settings.txt* contains the settings for the app. You can edit this with any text editor app or inside the *Kiosk Contacts* app.
 
-These settings may be edited "in app". Tap on the icon/logo four times and a view will be opened in which the configuration files may be read. There you must enter the pin (which is set in the *settings.txt* file).
+These settings may be edited "in app". Tap on the icon/logo four times and a view will be opened in which the configuration files may be read. There you must enter the pin which is set in the *settings.txt* file.
 
 The settings here (and their defaults, these should be changed appropriately) are:
 
