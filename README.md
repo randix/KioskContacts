@@ -1,9 +1,5 @@
 ### Kiosk Contacts
 
-###### Table of Contents
-
-[TOC]
-
 #### Introduction
 
 This app is designed to work on a kiosk tablet at at an event. It presents a configurable screen form to enter contact information. It can be run in the iOS "kiosk" mode on an iPhone or iPad.
