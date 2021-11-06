@@ -233,9 +233,9 @@ There you may switch Guided Access to on and set up the Passcode Settings. Read 
 
 Please contact  [Rand](mailto:rand@randix.net) or see the [documentation page](https://randix.github.io/KioskContacts) for current information.
 
-<br/>Download from the AppStore:
+<br/>Get *Kiosk Contacts*:
 
-[![Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917](/Users/rand/git/Kiosk-Contacts/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg)](https://apps.apple.com/us/app/kiosk-contacts/id1591801409)
+[![Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917](Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg)](https://apps.apple.com/us/app/kiosk-contacts/id1591801409)
 
 <br/><span style="font-size:12em">
 
