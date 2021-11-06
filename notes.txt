@@ -1,1 +1,7 @@
 
+add memo/note field entry
+
+address lines caps
+
+state all CAPS
+

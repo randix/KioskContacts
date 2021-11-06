@@ -102,8 +102,16 @@ class Configuration: ObservableObject {
                 case "image":
                     image = value
                     let iconUrl = docDir.appendingPathComponent(image)
-                    if let data = try? Data(contentsOf: iconUrl) {
-                        iconImage = UIImage(data: data)!
+                    if  FileManager.default.fileExists(atPath: iconUrl.path) {
+                        if let data = try? Data(contentsOf: iconUrl) {
+                            iconImage = UIImage(data: data)!
+                        }
+                    } else {
+                        if let icon1024Url = Bundle.main.url(forResource: "1024", withExtension: "png") {
+                            if let data = try? Data(contentsOf: icon1024Url) {
+                                iconImage = UIImage(data: data)!
+                            }
+                        }
                     }
                 case "event":
                     event = value

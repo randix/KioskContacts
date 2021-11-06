@@ -34,6 +34,7 @@ struct AddressiPadView: View {
                 HStack {
                     Spacer().frame(width:20)
                     TextField("Street", text: $contact.addressline1)
+                        .autocapitalization(.words)
                         .font(.system(size: fs))
                         .frame(width:640)
                         .textFieldStyle(.roundedBorder)
@@ -45,6 +46,7 @@ struct AddressiPadView: View {
                     HStack {
                         Spacer().frame(width:20)
                         TextField("Address Line 2", text: $contact.addressline2)
+                            .autocapitalization(.words)
                             .font(.system(size: fs))
                             .frame(width:640)
                             .textFieldStyle(.roundedBorder)
@@ -56,11 +58,13 @@ struct AddressiPadView: View {
                 HStack(spacing:2) {
                     Spacer().frame(width:20)
                     TextField("City", text: $contact.city)
+                        .autocapitalization(.words)
                         .font(.system(size: fs))
                         .frame(width:210)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                     TextField("State", text: $contact.state)
+                        .autocapitalization(.allCharacters)
                         .font(.system(size: fs))
                         .frame(width:110)
                         .textFieldStyle(.roundedBorder)
@@ -74,6 +78,7 @@ struct AddressiPadView: View {
                     
                     if config.country {
                         TextField("Country", text: $contact.country)
+                            .autocapitalization(.words)
                             .font(.system(size: fs))
                             .frame(width:200)
                             .textFieldStyle(.roundedBorder)
