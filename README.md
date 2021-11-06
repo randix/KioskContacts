@@ -231,7 +231,12 @@ There you may switch Guided Access to on and set up the Passcode Settings. Read 
 
 #### Support and Information
 
-Please contact  rand@randix.net or see https://randix.github.io/KioskContactsl#support-and-information .
+Please contact  rand@randix.net or see 
 
-See the document at https://randix.github.io/KioskContacts#privacy for information regarding the privacy aspects of the *Kiosk Contacts* app.
+[]: https://randix.github.io/KioskContacts
 
+for current information .
+
+###### Copyright
+
+© 2021 Randix LLC
