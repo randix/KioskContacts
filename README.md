@@ -237,4 +237,9 @@ Please contact  [Rand](mailto:rand@randix.net) or see the [documentation page](h
 
 [![Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917](Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg)](https://apps.apple.com/us/app/kiosk-contacts/id1591801409)
 
-<br/><font size=2>© 2021 Randix LLC</font>
+<br/>
+
+[Developer Home Page](https://randix.github.io/)
+
+<font size=2>© 2021 Randix LLC</font>
+
