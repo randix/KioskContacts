@@ -43,11 +43,13 @@ struct ContentView: View {
                     NameiPadView()
                     ContactiPadView()
                     AddressiPadView()
+                    NoteiPadView()
                    
                 } else {
                     NameiPhoneView()
                     ContactiPhoneView()
                     AddressiPhoneView()
+                    NoteiPhoneView()
                 }
                 
                 Spacer().frame(height: 20)

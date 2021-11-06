@@ -30,6 +30,7 @@ class Contact: ObservableObject {
     @Published var country = ""
     
     @Published var organization = ""
+    @Published var note = ""
     @Published var phone = ""
     @Published var mail = ""
     
@@ -50,6 +51,7 @@ class Contact: ObservableObject {
         country = ""
         
         organization = ""
+        note = ""
         phone = ""
         mail = ""
     }
@@ -61,7 +63,7 @@ class Contact: ObservableObject {
         var first = true
         for f in [title, firstname, middlename, middleinitial, lastname, suffix,
                   addressline1, addressline2, city, state, zipcode,country,
-                  organization, phone, mail] {
+                  organization, note, phone, mail] {
             csvline = appendfield(first, csvline, f)
             first = false
         }
@@ -74,7 +76,7 @@ class Contact: ObservableObject {
                 fileHandle.write(Data(csvline.utf8))
                 fileHandle.closeFile()
             } else {
-                let header = "title,firstname,middlename,middleinitial,lastname,suffix,addressline1,addressline2,city,state,zipcode,country,organization,phone,mail\n" + csvline
+                let header = "title,firstname,middlename,middleinitial,lastname,suffix,addressline1,addressline2,city,state,zipcode,country,organization,note,phone,mail\n" + csvline
                 try header.write(to: contactsUrl, atomically: true, encoding: .utf8)
             }
         } catch {

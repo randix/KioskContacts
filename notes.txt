@@ -1,7 +1,10 @@
 
 add memo/note field entry
 
-address lines caps
 
-state all CAPS
+Test for update:
+Fixed a defect that caused the app to crash if the settings name of the icon file was mistyped.
 
+Add automatic capitalization of name and address fields.
+
+Added a Note field to take additional notes.

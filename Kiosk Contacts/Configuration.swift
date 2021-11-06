@@ -58,6 +58,7 @@ class Configuration: ObservableObject {
     @Published var country = false
 
     @Published var organization = false
+    @Published var note = true
 
     @Published var mailaddress = true
     @Published var mailsend = false
@@ -144,6 +145,8 @@ class Configuration: ObservableObject {
 
                 case "organization":
                     organization = value != "0"
+                case "note":
+                    note = value != "0"
 
                 case "mailaddress":
                     mailaddress = value != "0"
