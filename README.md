@@ -231,7 +231,7 @@ There you may switch Guided Access to on and set up the Passcode Settings. Read 
 
 #### Support and Information
 
-Please contact  [Rand](rand@randix.net) or see the [documentation page](https://randix.github.io/KioskContacts) for current information .
+Please contact  [Rand](mailto:rand@randix.net) or see the [documentation page](https://randix.github.io/KioskContacts) for current information .
 
 ###### Copyright
 
