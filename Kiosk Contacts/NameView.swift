@@ -13,11 +13,10 @@ struct NameView: View {
     @ObservedObject var config = Configuration.shared
     
     var body: some View {
-        VStack {
-            Spacer().frame(height:10)
-            
+        VStack(spacing: 5) {
+           
             if config.title {
-                HStack(spacing: 2) {
+                HStack(spacing: 3) {
                     Spacer().frame(width:config.leading)
                     Text("Title")
                         .frame(width: config.text, alignment: .trailing)
@@ -32,7 +31,7 @@ struct NameView: View {
                 }.frame(width:config.width)
             }
             
-            HStack(spacing: 2) {
+            HStack(spacing: 3) {
                 Spacer().frame(width:config.leading)
                 Text("First")
                     .frame(width: config.text, alignment: .trailing)
@@ -47,7 +46,7 @@ struct NameView: View {
             .frame(width:config.width)
             
             if config.middlename {
-                HStack(spacing: 2) {
+                HStack(spacing: 3) {
                     Spacer().frame(width:config.leading)
                     Text("Middle")
                         .frame(width: config.text, alignment: .trailing)
@@ -63,7 +62,7 @@ struct NameView: View {
             }
             
             if config.middleinitial {
-                HStack(spacing: 2) {
+                HStack(spacing: 3) {
                     Spacer().frame(width:config.leading)
                     Text("MI")
                         .frame(width: config.text, alignment: .trailing)
@@ -79,7 +78,7 @@ struct NameView: View {
                 .frame(width:config.width)
             }
             
-            HStack(spacing: 2) {
+            HStack(spacing: 3) {
                 Spacer().frame(width:config.leading)
                 Text("Last")
                     .frame(width: config.text, alignment: .trailing)
@@ -94,7 +93,7 @@ struct NameView: View {
             .frame(width:config.width)
             
             if config.suffix {
-                HStack(spacing: 2) {
+                HStack(spacing: 3) {
                     Spacer().frame(width:config.leading)
                     Text("Suffix")
                         .frame(width: config.text, alignment: .trailing)

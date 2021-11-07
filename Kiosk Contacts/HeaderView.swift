@@ -44,6 +44,8 @@ struct HeaderView: View {
             Text(config.subtitle)
                 .font(.system(size: fsSubtitle))
                 .bold()
+            
+            Spacer().frame(height:10)
         }
         .onAppear(perform: {
             if config.iPad {

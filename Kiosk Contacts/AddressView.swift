@@ -15,12 +15,12 @@ struct AddressView: View {
     @State var null = ""
     
     var body: some View {
-        VStack {
-            Spacer().frame(height:10)
+        VStack(spacing: 5) {
+            //Spacer().frame(height:10)
             
             Group {
                
-                HStack(spacing: 2) {
+                HStack(spacing: 3) {
                     Spacer().frame(width:config.leading)
                     Text("Address")
                         .frame(width:config.text, alignment: .trailing)
@@ -36,7 +36,7 @@ struct AddressView: View {
                 .frame(width:config.width)
                 
                 if config.addressline2 {
-                    HStack(spacing: 2) {
+                    HStack(spacing: 3) {
                         Spacer().frame(width:config.leading)
                         Text("")
                             .frame(width:config.text)
@@ -52,50 +52,52 @@ struct AddressView: View {
                     .frame(width:config.width)
                 }
                 
-                HStack(spacing:2) {
+                HStack(spacing: 3) {
                     Spacer().frame(width:config.leading)
                     Text("")
                         .frame(width:config.text)
                     TextField("City", text: $contact.city)
                         .autocapitalization(.words)
-                        .frame(width:(config.width-config.text) * 0.4)
+                        .frame(width:(config.width-config.text) * 0.45)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0)
                         .lineLimit(1)
                         .minimumScaleFactor(0.4)
                     TextField("State", text: $contact.state)
                         .autocapitalization(.allCharacters)
+                        .disableAutocorrection(true)
                         .frame(width:(config.width-config.text) * 0.2)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0)
                         .lineLimit(1)
                         .minimumScaleFactor(0.4)
                     TextField("Zip", text: $contact.zipcode)
-                        .frame(width:(config.width-config.text) * 0.2)
+                        .frame(width:(config.width-config.text) * 0.32)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0)
                         .lineLimit(1)
                         .minimumScaleFactor(0.4)
                         .keyboardType(.numberPad)
-                    
-                    if config.country {
-                        TextField("Country", text: $contact.country)
-                            .autocapitalization(.words)
-                            .frame(width:(config.width-config.text) * 0.19)
-                            .textFieldStyle(.roundedBorder)
-                            .padding(.horizontal, 0)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.4)
-                    } else {
-                        TextField("", text: $null)
-                            .frame(width:(config.width-config.text) * 0.19)
-                            .padding(.horizontal, 0)
-                    }
-                    
                     Spacer()
                 }
                 .frame(width:config.width)
                 
+                if config.country {
+                    HStack(spacing: 3) {
+                        Spacer().frame(width:config.leading)
+                        Text("")
+                            .frame(width:config.text)
+                        TextField("Country", text: $contact.country)
+                            .autocapitalization(.words)
+                            .frame(width:config.width-config.text)
+                            .textFieldStyle(.roundedBorder)
+                            .padding(.horizontal, 0)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.4)
+                        Spacer()
+                    }
+                    .frame(width:config.width)
+                }
             }
         }
     }

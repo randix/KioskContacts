@@ -84,7 +84,7 @@ class Configuration: ObservableObject {
             text = CGFloat(110)
         } else {
             width = CGFloat(340)
-            text = CGFloat(60)
+            text = CGFloat(65)
         }
         let dictionary = Bundle.main.infoDictionary!
         appName = dictionary["CFBundleName"] as! String

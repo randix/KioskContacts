@@ -16,12 +16,10 @@ struct ContactView: View {
   
     var body: some View {
         
-        VStack {
-            
-            Spacer().frame(height:10)
+        VStack(spacing: 5) {
             
             if config.mailaddress {
-                HStack(spacing: 2) {
+                HStack(spacing: 3) {
                     Spacer().frame(width:config.leading)
                     Text("Mail")
                         .frame(width: config.text, alignment: .trailing)
@@ -40,7 +38,7 @@ struct ContactView: View {
             }
            
             if config.phone {
-                HStack(spacing: 2) {
+                HStack(spacing: 3) {
                     Spacer().frame(width:config.leading)
                     Text("Phone")
                         .frame(width: config.text, alignment: .trailing)
@@ -57,12 +55,13 @@ struct ContactView: View {
            
             if config.organization {
                 Spacer().frame(width:config.leading)
-                HStack(spacing: 2) {
+                HStack(spacing: 3) {
+                    Spacer().frame(width:config.leading)
                     Text("Organization")
                         .frame(width:leadingOrg, alignment: .trailing)
                         //.background(Color.yellow)
                     TextField("Organization", text: $contact.organization)
-                        .frame(width:config.width-leadingOrg+2)
+                        .frame(width:config.width-leadingOrg)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                     Spacer()

@@ -16,7 +16,7 @@ struct NoteView: View {
         
         VStack {
             if config.note {
-                HStack(spacing: 2) {
+                HStack(spacing: 3) {
                     Spacer().frame(width:config.leading)
                     Text("Note")
                         .frame(width: config.text, alignment: .trailing)
