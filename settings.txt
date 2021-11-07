@@ -17,7 +17,6 @@ addressline2=0
 country=0
 
 organization=0
-
 note=1
 
 mailaddress=1
