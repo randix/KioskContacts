@@ -17,8 +17,11 @@ enum SizeClass {
 
 class Configuration: ObservableObject {
     
-    private init() {}
+    private init() { }
     static let shared = Configuration()
+    
+    var iPad = UIScreen.main.bounds.width > 600
+    var leadingFrame = CGFloat(45)
     
     @Published var setupCount = 0
     
@@ -73,6 +76,11 @@ class Configuration: ObservableObject {
     
     func readConfig() {
         
+        if iPad {
+            leadingFrame = CGFloat(90)
+        } else {
+            leadingFrame = CGFloat(45)
+        }
         let dictionary = Bundle.main.infoDictionary!
         appName = dictionary["CFBundleName"] as! String
         appVersion = dictionary["CFBundleShortVersionString"] as! String

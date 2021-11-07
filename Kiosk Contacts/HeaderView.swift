@@ -7,20 +7,22 @@
 
 import SwiftUI
 
-struct HeaderiPhoneView: View {
+struct HeaderView: View {
     
     @Binding var showConfig: Bool
     
     @ObservedObject var config = Configuration.shared
     
 
-    let fs = CGFloat(14)
-    let fsTitle = CGFloat(18)
-    let fsSubtitle = CGFloat(14)
+    // iPhone sizes
+    @State var iconWidth = CGFloat(350)
+    @State var iconHeight = CGFloat(60)
+    @State var fsTitle = CGFloat(18)
+    @State var fsSubtitle = CGFloat(14)
     
     var body: some View {
         Group {
-            Spacer().frame(height:20)
+            Spacer().frame(height:10)
             
             Button(action: {
                 config.setupCount += 1
@@ -32,18 +34,31 @@ struct HeaderiPhoneView: View {
                 Image(uiImage: config.iconImage!)      // iPad 700 x 130, iPhone 350 x 60
                     .resizable()
                     .scaledToFit()
-                    .frame(width:350, height: 60)
+                    .frame(width:iconWidth, height: iconHeight)
             }
             
             Spacer().frame(height:10)
             
             Text(config.kiosktitle)
-                .font(.system(size: 18))
+                .font(.system(size: fsTitle))
                 .bold()
             
             Text(config.subtitle)
-                .font(.system(size: 14))
+                .font(.system(size: fsSubtitle))
                 .bold()
         }
+        .onAppear(perform: {
+            if config.iPad {
+                iconWidth = CGFloat(700)
+                iconHeight = CGFloat(120)
+                fsTitle = CGFloat(20)
+                fsSubtitle = CGFloat(16)
+            } else {
+                iconWidth = CGFloat(350)
+                iconHeight = CGFloat(60)
+                fsTitle = CGFloat(18)
+                fsSubtitle = CGFloat(14)
+            }
+        })
     }
 }

@@ -7,16 +7,14 @@
 
 import SwiftUI
 
-struct ContactiPhoneView: View {
+struct ContactView: View {
     
     @ObservedObject var contact = Contact.shared
     @ObservedObject var config = Configuration.shared
     
-    let leadingFrame = CGFloat(45)
-    
-    let fs = CGFloat(14)
-    let fsTitle = CGFloat(18)
-    let fsSubtitle = CGFloat(14)
+    @State var leadingOrg = CGFloat(90)
+    @State var width = CGFloat(360)
+    @State var fs = CGFloat(14)
     
     var body: some View {
         
@@ -26,53 +24,64 @@ struct ContactiPhoneView: View {
             
             if config.mailaddress {
                 HStack {
-                    Spacer().frame(width:20)
+                    Spacer().frame(width:10)
                     Text("Mail")
                         .font(.system(size: fs))
-                        .frame(width: leadingFrame, alignment: .trailing)
+                        .frame(width: config.leadingFrame, alignment: .trailing)
                     TextField("john@example.com", text: $contact.mail)
                         .font(.system(size: fs))
-                        .frame(width:280)
+                        .frame(width:width-80)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                         .keyboardType(.emailAddress)
                         .autocapitalization(UITextAutocapitalizationType.none)
                     Spacer()
-                }.frame(width:360)
+                }.frame(width:width)
             }
            
             if config.phone {
                 HStack {
-                    Spacer().frame(width:20)
+                    Spacer().frame(width:10)
                     Text("Phone")
                         .font(.system(size: fs))
-                        .frame(width: leadingFrame, alignment: .trailing)
+                        .frame(width: config.leadingFrame, alignment: .trailing)
                     TextField("999-999-9999", text: $contact.phone)
                         .font(.system(size: fs))
-                        .frame(width:200)
+                        .frame(width:width-200)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                         .keyboardType(.numbersAndPunctuation)
                     Spacer()
-                }.frame(width:360)
+                }.frame(width:width)
             }
            
             if config.organization {
                 HStack {
-                    Spacer().frame(width:20)
+                    Spacer().frame(width:10)
                     Text("Organization")
                         .font(.system(size: fs))
-                        .frame(width:85, alignment: .leading)
+                        .frame(width:leadingOrg, alignment: .leading)
                     TextField("Organization", text: $contact.organization)
                         .font(.system(size: fs))
-                        .frame(width:240)
+                        .frame(width:width-leadingOrg-30)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                     Spacer()
-                }.frame(width:360)
+                }.frame(width:width)
             }
             
         }
+        .onAppear(perform: {
+            if config.iPad {
+                leadingOrg = CGFloat(100)
+                fs = CGFloat(16)
+                width = CGFloat(740)
+            } else {
+                leadingOrg = CGFloat(85)
+                fs = CGFloat(14)
+                width = CGFloat(360)
+            }
+        })
     }
 }
 
