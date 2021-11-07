@@ -1,3 +1,0 @@
-Editor focus into pin immediately 
-
-Only show keyboard dismiss if keyboard showing
