@@ -1,10 +1,3 @@
+Editor focus into pin immediately 
 
-add memo/note field entry
-
-
-Test for update:
-Fixed a defect that caused the app to crash if the settings name of the icon file was mistyped.
-
-Add automatic capitalization of name and address fields.
-
-Added a Note field to take additional notes.
+Only show keyboard dismiss if keyboard showing
