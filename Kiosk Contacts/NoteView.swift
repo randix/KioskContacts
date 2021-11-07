@@ -11,37 +11,25 @@ struct NoteView: View {
     
     @ObservedObject var contact = Contact.shared
     @ObservedObject var config = Configuration.shared
-    
-    @State var width = CGFloat(360)
-    @State var fs = CGFloat(14)
-    
+  
     var body: some View {
         
         VStack {
             if config.note {
-                HStack {
-                    Spacer().frame(width:10)
+                HStack(spacing: 2) {
+                    Spacer().frame(width:config.leading)
                     Text("Note")
-                        .font(.system(size: fs))
-                        .frame(width: config.leadingFrame, alignment: .trailing)
+                        .frame(width: config.text, alignment: .trailing)
                     TextField("note", text: $contact.note)
-                        .font(.system(size: fs))
-                        .frame(width:width-75)
+                        .frame(width:config.width-config.text)
                         .textFieldStyle(.roundedBorder)
-                        .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
+                        .padding(.horizontal, 0)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.4)
                        Spacer()
-                }.frame(width:width)
+                }.frame(width:config.width)
             }
         }
-        .onAppear(perform: {
-            if config.iPad {
-                fs = CGFloat(16)
-                width = CGFloat(720)
-            } else {
-                fs = CGFloat(14)
-                width = CGFloat(360)
-            }
-        })
     }
 }
 

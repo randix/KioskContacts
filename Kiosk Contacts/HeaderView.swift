@@ -12,8 +12,6 @@ struct HeaderView: View {
     @Binding var showConfig: Bool
     
     @ObservedObject var config = Configuration.shared
-    
-
     // iPhone sizes
     @State var iconWidth = CGFloat(350)
     @State var iconHeight = CGFloat(60)
@@ -31,7 +29,7 @@ struct HeaderView: View {
                     config.setupCount = 0
                 }
             }) {
-                Image(uiImage: config.iconImage!)      // iPad 700 x 130, iPhone 350 x 60
+                Image(uiImage: config.iconImage!)  
                     .resizable()
                     .scaledToFit()
                     .frame(width:iconWidth, height: iconHeight)

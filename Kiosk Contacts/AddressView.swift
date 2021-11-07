@@ -12,71 +12,65 @@ struct AddressView: View {
     @ObservedObject var contact = Contact.shared
     @ObservedObject var config = Configuration.shared
     
-    @State var width = CGFloat(360)
-    @State var fs = CGFloat(14)
-    
     var body: some View {
         VStack {
             Spacer().frame(height:10)
             
             Group {
                 HStack {
-                    Spacer().frame(width:10)
+                    Spacer().frame(width:config.leading)
                     Text("Address")
-                        .font(.system(size: fs))
-                        .frame(width:60, alignment: .leading)
+                        .frame(width:70, alignment: .leading)
                     Spacer()
-                }.frame(width:width)
+                }
+                .frame(width:config.width)
                 
                 HStack {
-                    Spacer().frame(width:10)
+                    Spacer().frame(width:config.leading)
                     TextField("Street", text: $contact.addressline1)
                         .autocapitalization(.words)
-                        .font(.system(size: fs))
-                        .frame(width:width-20)
+                        .frame(width:config.width-5)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0)
                         .lineLimit(1)
                         .minimumScaleFactor(0.4)
                     Spacer()
-                }.frame(width:width)
+                }
+                .frame(width:config.width)
                 
                 if config.addressline2 {
                     HStack {
-                        Spacer().frame(width:10)
+                        Spacer().frame(width:config.leading)
                         TextField("Address Line 2", text: $contact.addressline2)
                             .autocapitalization(.words)
-                            .font(.system(size: fs))
-                            .frame(width:width-20)
+                            .frame(width:config.width-5)
                             .textFieldStyle(.roundedBorder)
                             .padding(.horizontal, 0)
                             .lineLimit(1)
                             .minimumScaleFactor(0.4)
                         Spacer()
-                    }.frame(width:width)
+                    }
+                    .frame(width:config.width)
                 }
                 
                 HStack(spacing:2) {
-                    Spacer().frame(width:10)
+                    Spacer().frame(width:config.leading)
                     TextField("City", text: $contact.city)
                         .autocapitalization(.words)
-                        .font(.system(size: fs))
-                        .frame(width:130)
+                        .frame(width:config.width * 0.4)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0)
                         .lineLimit(1)
                         .minimumScaleFactor(0.4)
                     TextField("State", text: $contact.state)
                         .autocapitalization(.allCharacters)
-                        .font(.system(size: fs))
-                        .frame(width:60)
+                        .frame(width:config.width * 0.15)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0)
                         .lineLimit(1)
                         .minimumScaleFactor(0.4)
                     TextField("Zip", text: $contact.zipcode)
-                        .font(.system(size: fs))
-                        .frame(width:70)
+                        .frame(width:config.width * 0.2)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0)
                         .lineLimit(1)
@@ -86,8 +80,7 @@ struct AddressView: View {
                     if config.country {
                         TextField("Country", text: $contact.country)
                             .autocapitalization(.words)
-                            .font(.system(size: fs))
-                            .frame(width:70)
+                            .frame(width:config.width * 0.22)
                             .textFieldStyle(.roundedBorder)
                             .padding(.horizontal, 0)
                             .lineLimit(1)
@@ -95,18 +88,10 @@ struct AddressView: View {
                     }
                     
                     Spacer()
-                }.frame(width:width)
+                }
+                .frame(width:config.width)
                 
             }
         }
-        .onAppear(perform: {
-            if config.iPad {
-                fs = CGFloat(16)
-                width = CGFloat(720)
-            } else {
-                fs = CGFloat(14)
-                width = CGFloat(360)
-            }
-        })
     }
 }

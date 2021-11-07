@@ -21,7 +21,10 @@ class Configuration: ObservableObject {
     static let shared = Configuration()
     
     var iPad = UIScreen.main.bounds.width > 600
-    var leadingFrame = CGFloat(45)
+    
+    var leading = CGFloat(5)
+    var width = CGFloat(740)
+    var text = CGFloat(45)
     
     @Published var setupCount = 0
     
@@ -77,9 +80,11 @@ class Configuration: ObservableObject {
     func readConfig() {
         
         if iPad {
-            leadingFrame = CGFloat(90)
+            width = CGFloat(720)
+            text = CGFloat(110)
         } else {
-            leadingFrame = CGFloat(45)
+            width = CGFloat(340)
+            text = CGFloat(60)
         }
         let dictionary = Bundle.main.infoDictionary!
         appName = dictionary["CFBundleName"] as! String

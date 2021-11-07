@@ -12,10 +12,8 @@ struct ContactView: View {
     @ObservedObject var contact = Contact.shared
     @ObservedObject var config = Configuration.shared
     
-    @State var leadingOrg = CGFloat(90)
-    @State var width = CGFloat(360)
-    @State var fs = CGFloat(14)
-    
+    let leadingOrg = CGFloat(110)
+  
     var body: some View {
         
         VStack {
@@ -23,65 +21,55 @@ struct ContactView: View {
             Spacer().frame(height:10)
             
             if config.mailaddress {
-                HStack {
-                    Spacer().frame(width:10)
+                HStack(spacing: 2) {
+                    Spacer().frame(width:config.leading)
                     Text("Mail")
-                        .font(.system(size: fs))
-                        .frame(width: config.leadingFrame, alignment: .trailing)
+                        .frame(width: config.text, alignment: .trailing)
+                        //.background(Color.yellow)
                     TextField("john@example.com", text: $contact.mail)
-                        .font(.system(size: fs))
-                        .frame(width:width-80)
+                        .frame(width:config.width-config.text)
                         .textFieldStyle(.roundedBorder)
-                        .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
+                        .padding(.horizontal, 0)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.4)
                         .keyboardType(.emailAddress)
                         .autocapitalization(UITextAutocapitalizationType.none)
                     Spacer()
-                }.frame(width:width)
+                }
+                .frame(width:config.width)
             }
            
             if config.phone {
-                HStack {
-                    Spacer().frame(width:10)
+                HStack(spacing: 2) {
+                    Spacer().frame(width:config.leading)
                     Text("Phone")
-                        .font(.system(size: fs))
-                        .frame(width: config.leadingFrame, alignment: .trailing)
+                        .frame(width: config.text, alignment: .trailing)
+                        //.background(Color.yellow)
                     TextField("999-999-9999", text: $contact.phone)
-                        .font(.system(size: fs))
-                        .frame(width:width-200)
+                        .frame(width:config.width-config.text)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                         .keyboardType(.numbersAndPunctuation)
                     Spacer()
-                }.frame(width:width)
+                }
+                .frame(width:config.width)
             }
            
             if config.organization {
-                HStack {
-                    Spacer().frame(width:10)
+                Spacer().frame(width:config.leading)
+                HStack(spacing: 2) {
                     Text("Organization")
-                        .font(.system(size: fs))
-                        .frame(width:leadingOrg, alignment: .leading)
+                        .frame(width:leadingOrg, alignment: .trailing)
+                        //.background(Color.yellow)
                     TextField("Organization", text: $contact.organization)
-                        .font(.system(size: fs))
-                        .frame(width:width-leadingOrg-30)
+                        .frame(width:config.width-leadingOrg+2)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
                     Spacer()
-                }.frame(width:width)
+                }
+                .frame(width:config.width)
             }
-            
         }
-        .onAppear(perform: {
-            if config.iPad {
-                leadingOrg = CGFloat(100)
-                fs = CGFloat(16)
-                width = CGFloat(740)
-            } else {
-                leadingOrg = CGFloat(85)
-                fs = CGFloat(14)
-                width = CGFloat(360)
-            }
-        })
     }
 }
 

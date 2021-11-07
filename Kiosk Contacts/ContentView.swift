@@ -45,7 +45,7 @@ struct ContentView: View {
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }) {
                     Text("Submit")
-                        .font(.system(size: 16)).bold()
+                        .bold()
                 }
                 
                 Spacer()
@@ -58,7 +58,6 @@ struct ContentView: View {
                     .font(.system(size: 9))
                 Spacer().frame(height: 10)
             }
-            //.frame(maxHeight:200)
         }
         .sheet(isPresented: $showSheetMail, content: { MailView(result: $resultMail) })
         .sheet(isPresented: $showSheetMessage, content: { MailView(result: $resultMail) })

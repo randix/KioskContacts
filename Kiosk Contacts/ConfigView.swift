@@ -52,9 +52,9 @@ struct ConfigView: View {
             if !master {
                 HStack {
                     Spacer()
-                    Image(systemName: "123.rectangle").font(.system(size: 18)).frame(width: 30)
+                    Image(systemName: "123.rectangle")
+                        .frame(width: 30)
                     SecureField("pin", text:$pin)
-                        .font(.system(size: 18))
                         .frame(width:70)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)
@@ -75,11 +75,9 @@ struct ConfigView: View {
                 HStack {
                     Spacer()
                     Text("Edit File:")
-                        .font(.system(size:16))
                     Picker("Files", selection: $fileSelector, content: {
                         ForEach(0..<files.count, id: \.self) {
                             Text(files[$0])
-                                .font(.system(size:16))
                         }
                     })
                         .pickerStyle(MenuPickerStyle())
@@ -117,7 +115,7 @@ struct ConfigView: View {
                     }) {
                         VStack {
                             Image(systemName: "arrow.uturn.backward").font(.system(size:24))
-                            Text("Cancel").font(.system(size:12))
+                            Text("Cancel")
                         }
                     }
                     Spacer().frame(width:40)
@@ -129,9 +127,9 @@ struct ConfigView: View {
                         VStack {
                             Image(systemName: "square.and.arrow.down").font(.system(size:24))
                             if modified {
-                                Text("Save").font(.system(size:12)).bold()
+                                Text("Save").bold()
                             } else {
-                                Text("Save").font(.system(size:12))
+                                Text("Save")
                             }
                         }
                     }

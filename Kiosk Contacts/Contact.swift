@@ -64,7 +64,11 @@ class Contact: ObservableObject {
         for f in [title, firstname, middlename, middleinitial, lastname, suffix,
                   addressline1, addressline2, city, state, zipcode,country,
                   organization, phone, mail, note] {
-            csvline = appendfield(first, csvline, f)
+            var fixed = f.trimmingCharacters(in: .whitespaces)
+            if fixed.contains(",") {
+                fixed = "\(fixed)"
+            }
+            csvline = appendfield(first, csvline, fixed)
             first = false
         }
         csvline += "\n"
