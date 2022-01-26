@@ -22,7 +22,6 @@
 		A4AFDAA227258B84006D4F54 /* Substitutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDA9E27258B84006D4F54 /* Substitutes.swift */; };
 		A4AFDAA327258B84006D4F54 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDA9F27258B84006D4F54 /* Contact.swift */; };
 		A4AFDAA427258B84006D4F54 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDAA027258B84006D4F54 /* MailView.swift */; };
-		A4AFDAAC27258E92006D4F54 /* notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAA727258E92006D4F54 /* notes.txt */; };
 		A4AFDAAD27258E92006D4F54 /* mail.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAA827258E92006D4F54 /* mail.txt */; };
 		A4AFDAAE27258E92006D4F54 /* settings.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAA927258E92006D4F54 /* settings.txt */; };
 		A4AFDAAF27258E92006D4F54 /* message.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAAA27258E92006D4F54 /* message.txt */; };
@@ -30,6 +29,7 @@
 		A4AFDAB6272593B9006D4F54 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDAB5272593B9006D4F54 /* Configuration.swift */; };
 		A4E696BC272C22AA00623DA8 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E696BB272C22AA00623DA8 /* ConfigView.swift */; };
 		A4E696BE272CE39500623DA8 /* 1024.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E696BD272CE39500623DA8 /* 1024.png */; };
+		A4F8A52627A181EF00CA367B /* notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4F8A52527A181EF00CA367B /* notes.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +50,6 @@
 		A4AFDA9E27258B84006D4F54 /* Substitutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Substitutes.swift; sourceTree = "<group>"; };
 		A4AFDA9F27258B84006D4F54 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		A4AFDAA027258B84006D4F54 /* MailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
-		A4AFDAA727258E92006D4F54 /* notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = notes.txt; sourceTree = "<group>"; };
 		A4AFDAA827258E92006D4F54 /* mail.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mail.txt; sourceTree = "<group>"; };
 		A4AFDAA927258E92006D4F54 /* settings.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = settings.txt; sourceTree = "<group>"; };
 		A4AFDAAA27258E92006D4F54 /* message.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = message.txt; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		A4AFDAB5272593B9006D4F54 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		A4E696BB272C22AA00623DA8 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		A4E696BD272CE39500623DA8 /* 1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1024.png; path = AppIcons/Assets.xcassets/AppIcon.appiconset/1024.png; sourceTree = "<group>"; };
+		A4F8A52527A181EF00CA367B /* notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = notes.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 		A4AFDA832725193E006D4F54 = {
 			isa = PBXGroup;
 			children = (
-				A4AFDAA727258E92006D4F54 /* notes.txt */,
+				A4F8A52527A181EF00CA367B /* notes.txt */,
 				A41079DD27270E5E009D6833 /* README.pdf */,
 				A4AFDAB327259360006D4F54 /* README.md */,
 				A4AFDAA927258E92006D4F54 /* settings.txt */,
@@ -184,9 +184,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4AFDAAC27258E92006D4F54 /* notes.txt in Resources */,
 				A41079DC2726E216009D6833 /* VM Logo Color Thrive Tag.jpg in Resources */,
 				A4AFDAAD27258E92006D4F54 /* mail.txt in Resources */,
+				A4F8A52627A181EF00CA367B /* notes.txt in Resources */,
 				A4AFDAAF27258E92006D4F54 /* message.txt in Resources */,
 				A41079DE27270E5E009D6833 /* README.pdf in Resources */,
 				A4E696BE272CE39500623DA8 /* 1024.png in Resources */,
@@ -345,7 +345,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_ASSET_PATHS = "\"Kiosk Contacts/Preview Content\"";
 				DEVELOPMENT_TEAM = J27945M9KG;
 				ENABLE_PREVIEWS = YES;
@@ -364,7 +364,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.randix.Kiosk-Contacts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -379,7 +379,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_ASSET_PATHS = "\"Kiosk Contacts/Preview Content\"";
 				DEVELOPMENT_TEAM = J27945M9KG;
 				ENABLE_PREVIEWS = YES;
@@ -398,7 +398,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.randix.Kiosk-Contacts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
