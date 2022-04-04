@@ -23,8 +23,8 @@ class Configuration: ObservableObject {
     var iPad = UIScreen.main.bounds.width > 600
     
     var leading = CGFloat(5)
-    var width = CGFloat(740)
-    var text = CGFloat(45)
+    var width = CGFloat(735)
+    var text = CGFloat(50)
     
     @Published var setupCount = 0
     

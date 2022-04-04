@@ -1,4 +1,2 @@
-add date/time to csv file
 only store fields that are configured
 add "general field"
-make iPad text larger

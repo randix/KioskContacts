@@ -54,7 +54,7 @@ struct ContentView: View {
                     .font(.system(size: 9))
                 Text("For info, see: Files App: On My " + (config.iPad ? "iPad" : "iPhone") + " / Kiosk Contacts / README")
                     .font(.system(size: 9))
-                Text("Copyright © 2021 Randix LLC. All rights reserved.")
+                Text("Copyright © 2021-2022 Randix LLC. All rights reserved.")
                     .font(.system(size: 9))
                 Spacer().frame(height: 10)
             }

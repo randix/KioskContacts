@@ -71,7 +71,12 @@ class Contact: ObservableObject {
             csvline = appendfield(first, csvline, fixed)
             first = false
         }
-        csvline += "\n"
+        
+        // Add date/time
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        csvline += ",\(dateFormatter.string(from: date))\n"
         
         do {
             if FileManager.default.fileExists(atPath: contactsUrl.path) {
@@ -80,7 +85,7 @@ class Contact: ObservableObject {
                 fileHandle.write(Data(csvline.utf8))
                 fileHandle.closeFile()
             } else {
-                let header = "title,firstname,middlename,middleinitial,lastname,suffix,addressline1,addressline2,city,state,zipcode,country,organization,phone,mail,note\n" + csvline
+                let header = "title,firstname,middlename,middleinitial,lastname,suffix,addressline1,addressline2,city,state,zipcode,country,organization,phone,mail,note,date\n" + csvline
                 try header.write(to: contactsUrl, atomically: true, encoding: .utf8)
             }
         } catch {
