@@ -228,7 +228,17 @@ On iOS 15, this is activated under:
 
 **Settings** -> **Accessibility** -> **Guided Access**
 
-There you may switch Guided Access to on and set up the Passcode Settings. Read the instructions there on how to start and stop it.
+There you may switch **Guided Access** to on and set up the Passcode Settings. Read the instructions there on how to start and stop it.
+
+#### Font Size
+
+iOS supports changing the default text font size.
+
+This is activated under:
+
+**Settings** -> **Accessibility** -> **Display & Text Size** -> **Larger Text** 
+
+There you may switch **Larger Accessibility Sizes** to on and then adjust the size of the text with the slider bar below. Try several positions on the slider bar with viewing the Kiosk Contacts app and decide on the best size.
 
 #### Privacy
 

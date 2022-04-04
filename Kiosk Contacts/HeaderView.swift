@@ -15,8 +15,8 @@ struct HeaderView: View {
     // iPhone sizes
     @State var iconWidth = CGFloat(350)
     @State var iconHeight = CGFloat(60)
-    @State var fsTitle = CGFloat(18)
-    @State var fsSubtitle = CGFloat(14)
+    @State var fsTitle = CGFloat(19)
+    @State var fsSubtitle = CGFloat(17)
     
     var body: some View {
         Group {
@@ -51,13 +51,13 @@ struct HeaderView: View {
             if config.iPad {
                 iconWidth = CGFloat(700)
                 iconHeight = CGFloat(120)
-                fsTitle = CGFloat(20)
-                fsSubtitle = CGFloat(16)
+                fsTitle = CGFloat(21)
+                fsSubtitle = CGFloat(19)
             } else {
                 iconWidth = CGFloat(350)
                 iconHeight = CGFloat(60)
-                fsTitle = CGFloat(18)
-                fsSubtitle = CGFloat(14)
+                fsTitle = CGFloat(19)
+                fsSubtitle = CGFloat(17)
             }
         })
     }
