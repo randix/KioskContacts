@@ -252,5 +252,5 @@ Please contact  [Rand](mailto:rand@randix.net) or see the [documentation page](h
 
 [Developer Home Page](https://randix.github.io/)
 
-<font size=2>© 2021 Randix LLC</font>
+<font size=2>© 2021-2022 Randix LLC</font>
 
