@@ -14,7 +14,7 @@ The app saves collected information to a file and initiates the sending of a wel
 
 The minimum OS is:
 
- - iOS or iPadOS 14.0 or greater
+- iOS or iPadOS 14.0 or greater
 
 #### Access to Data
 
@@ -82,79 +82,73 @@ These settings may be edited "in app". Tap on the icon/logo image four times and
 The settings here should be changed appropriately:
 
 - pin=\*\*\*\*
-
+  
   This is the pin to be used to edit the files inside the *Kiosk Contacts* app.
 
 - kiosktitle=Conference East
-
+  
   Sets the title of the app.
 
 - subtitle=VM Kiosk
-
+  
   Sets the subtitle of the app.
 
 - event=conference
-
+  
   Used in substitions.
 
 - image=VM Logo Color Thrive Tag.jpg
-
+  
   Logo.
 
-
-
 - mailsend=1
-
+  
   Set to 0 or 1. If 1, then a mail is sent.
 
 - messagesend=0
-
+  
   Set to 0 or 1. If 1, then an iMessage is sent.
-
+  
   Only one of mailsend or messagesend should be set to 1. If both are set, then a mail message will be preferred. If both are set, and only one of the fields in the form are filled out, then that is preferred.
 
-
-
 - title=1
-
+  
   Set to 1 to collect a title, such as "Mr.", "Mrs.", etc.
 
 - middlename=0
-
+  
   Set to 1 to collect the middle initial.
 
 - middleinitial=0
-
+  
   Set to 1 to collect the middle name.
 
 - suffix=1
-
+  
   Set to 1 to collect a name suffix, such as "Jr.", "III", etc.
 
-
-
 - addressline2=0
-
+  
   Set to 1 to display and collect the second line of an address.
 
 - country=0
-
+  
   Set to 1 to collect the state.
 
 - organization=0
-
+  
   Set to 1 to collect an organization.
 
 - note=1
-
+  
   Set to 1 to collect a note.
 
 - mailaddress=1
-
+  
   Set to 1 to collect a mail address.
 
 - phone=1
-
+  
   Set to 1 to collect a phone number.
 
 #### Substitions
@@ -181,8 +175,6 @@ These fields may be included in the mail, message, and subject files and will be
 
 - suffix
 
-
-
 - addressline1
 
 - addressline2
@@ -195,11 +187,8 @@ These fields may be included in the mail, message, and subject files and will be
 
 - country
 
-
-
 - organization
 - note
-
 
 - mailaddress
 
@@ -253,4 +242,3 @@ Please contact  [Rand](mailto:rand@randix.net) or see the [documentation page](h
 [Developer Home Page](https://randix.github.io/)
 
 <font size=2>© 2021-2022 Randix LLC</font>
-
