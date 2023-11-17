@@ -1,8 +1,4 @@
-only store fields that are configured
-add "general field"
-
-How to convert README.md to README.pdf:
----------------------------------------
+## How to convert README.md to README.pdf:
   ~/bin/iCloud/Markdown.pl README.md > README.html
   open README.html in Safari
   File->Print
@@ -12,4 +8,5 @@ How to convert README.md to README.pdf:
       change file name to README.pdf
       save
     
-
+## TODO
+  only store fields that are configured

@@ -11,7 +11,7 @@ struct ConfigView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    @ObservedObject var config = Configuration.shared
+    @ObservedObject var config = ConfigurationModel.shared
     
     let files = [
         "settings.txt",
@@ -81,7 +81,7 @@ struct ConfigView: View {
                         }
                     })
                         .pickerStyle(MenuPickerStyle())
-                        .frame(width: 100, alignment: .leading)
+                        .frame(width: 150, alignment: .leading)
                         .onChange(of: fileSelector) { _ in
                             loadFile()
                         }

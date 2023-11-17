@@ -11,12 +11,12 @@ import UIKit
 
 struct MessageView: UIViewControllerRepresentable {
     
-    @ObservedObject var config = Configuration.shared
+    @ObservedObject var config = ConfigurationModel.shared
     
     @Environment(\.presentationMode) var presentation
     @Binding var result: Result<MessageComposeResult, Error>?
     
-    @ObservedObject var contact = Contact.shared
+    @ObservedObject var contact = ContactModel.shared
     
     class Coordinator: NSObject, MFMessageComposeViewControllerDelegate {
         
@@ -38,7 +38,7 @@ struct MessageView: UIViewControllerRepresentable {
                 print("Message failed")
             case MessageComposeResult.sent.rawValue:
                 print("Message was sent")
-                Contact.shared.clear()
+                ContactModel.shared.clear()
             default:
                 break;
             }
@@ -63,7 +63,7 @@ struct MessageView: UIViewControllerRepresentable {
         let messageVC = MFMessageComposeViewController()
         let sub = Substitute()
         messageVC.body = sub.substitute(config.messageContents);
-        messageVC.recipients = [Contact.shared.phone]
+        messageVC.recipients = [ContactModel.shared.phone]
         messageVC.messageComposeDelegate = context.coordinator;
         return messageVC
     }

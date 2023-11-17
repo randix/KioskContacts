@@ -10,8 +10,8 @@ import MessageUI
 
 struct ContentView: View {
     
-    @ObservedObject var contact = Contact.shared
-    @ObservedObject var config = Configuration.shared
+    @ObservedObject var contact = ContactModel.shared
+    @ObservedObject var config = ConfigurationModel.shared
     
     @State var showConfig = false
     @State var showSheetMail = false
@@ -40,6 +40,8 @@ struct ContentView: View {
                         showSheetMail = true
                     } else if config.messagesend && contact.phone != "" {
                         showSheetMessage = true
+                    } else {
+                        ContactModel.shared.clear()
                     }
                     // dismiss keyboard
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)

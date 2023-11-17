@@ -9,8 +9,8 @@ import SwiftUI
 
 struct AddressView: View {
     
-    @ObservedObject var contact = Contact.shared
-    @ObservedObject var config = Configuration.shared
+    @ObservedObject var contact = ContactModel.shared
+    @ObservedObject var config = ConfigurationModel.shared
     
     @State var null = ""
     

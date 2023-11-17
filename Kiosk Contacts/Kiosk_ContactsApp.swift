@@ -17,7 +17,7 @@ struct Kiosk_ContactsApp: App {
     // ipad pro 12.9:    1024 x 1366
     
     init() {
-        Configuration.shared.readConfig()
+        ConfigurationModel.shared.readConfig()
     }
     
     var body: some Scene {

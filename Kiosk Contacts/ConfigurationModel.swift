@@ -225,7 +225,7 @@ class ConfigurationModel: ObservableObject {
         copyfileToUserDocumentDirectory(message)
         copyfileToUserDocumentDirectory("README.md")
         copyfileToUserDocumentDirectory("README.pdf")
-        copyfileToUserDocumentDirectory("Updates.pdf")
+        copyfileToUserDocumentDirectory("Updates.txt")
         
         copyfileToUserDocumentDirectory("1024.png")
         copyfileToUserDocumentDirectory("VM Logo Color Thrive Tag.jpg")

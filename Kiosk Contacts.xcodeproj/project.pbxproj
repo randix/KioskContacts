@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A41079DC2726E216009D6833 /* VM Logo Color Thrive Tag.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A41079DB2726E216009D6833 /* VM Logo Color Thrive Tag.jpg */; };
 		A43908BD27FB25B6002174E0 /* README.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A43908BC27FB25B6002174E0 /* README.pdf */; };
+		A439D8402B07DFAE00F69C2B /* Updates.txt in Sources */ = {isa = PBXBuildFile; fileRef = A439D83F2B07DFAE00F69C2B /* Updates.txt */; };
+		A439D8412B07E04C00F69C2B /* Updates.txt in Resources */ = {isa = PBXBuildFile; fileRef = A439D83F2B07DFAE00F69C2B /* Updates.txt */; };
 		A450510D2727A26F004FC466 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450510C2727A26F004FC466 /* HeaderView.swift */; };
 		A450510F2727A533004FC466 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450510E2727A533004FC466 /* NameView.swift */; };
 		A45051152727B0EA004FC466 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45051142727B0EA004FC466 /* AddressView.swift */; };
@@ -20,13 +22,13 @@
 		A4AFDA972725193F006D4F54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDA962725193F006D4F54 /* Preview Assets.xcassets */; };
 		A4AFDAA127258B84006D4F54 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDA9D27258B84006D4F54 /* MessageView.swift */; };
 		A4AFDAA227258B84006D4F54 /* Substitutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDA9E27258B84006D4F54 /* Substitutes.swift */; };
-		A4AFDAA327258B84006D4F54 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDA9F27258B84006D4F54 /* Contact.swift */; };
+		A4AFDAA327258B84006D4F54 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDA9F27258B84006D4F54 /* ContactModel.swift */; };
 		A4AFDAA427258B84006D4F54 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDAA027258B84006D4F54 /* MailView.swift */; };
 		A4AFDAAD27258E92006D4F54 /* mail.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAA827258E92006D4F54 /* mail.txt */; };
 		A4AFDAAE27258E92006D4F54 /* settings.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAA927258E92006D4F54 /* settings.txt */; };
 		A4AFDAAF27258E92006D4F54 /* message.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAAA27258E92006D4F54 /* message.txt */; };
 		A4AFDAB427259360006D4F54 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAB327259360006D4F54 /* README.md */; };
-		A4AFDAB6272593B9006D4F54 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDAB5272593B9006D4F54 /* Configuration.swift */; };
+		A4AFDAB6272593B9006D4F54 /* ConfigurationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDAB5272593B9006D4F54 /* ConfigurationModel.swift */; };
 		A4E696BC272C22AA00623DA8 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E696BB272C22AA00623DA8 /* ConfigView.swift */; };
 		A4E696BE272CE39500623DA8 /* 1024.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E696BD272CE39500623DA8 /* 1024.png */; };
 		A4F8A52627A181EF00CA367B /* notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4F8A52527A181EF00CA367B /* notes.txt */; };
@@ -36,6 +38,7 @@
 		A41079DB2726E216009D6833 /* VM Logo Color Thrive Tag.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "VM Logo Color Thrive Tag.jpg"; sourceTree = "<group>"; };
 		A43908BC27FB25B6002174E0 /* README.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = README.pdf; sourceTree = "<group>"; };
 		A43908BE28063403002174E0 /* Kiosk ContactsDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Kiosk ContactsDebug.entitlements"; sourceTree = "<group>"; };
+		A439D83F2B07DFAE00F69C2B /* Updates.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Updates.txt; sourceTree = "<group>"; };
 		A450510C2727A26F004FC466 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		A450510E2727A533004FC466 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 		A45051142727B0EA004FC466 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
@@ -49,13 +52,13 @@
 		A4AFDA962725193F006D4F54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A4AFDA9D27258B84006D4F54 /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		A4AFDA9E27258B84006D4F54 /* Substitutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Substitutes.swift; sourceTree = "<group>"; };
-		A4AFDA9F27258B84006D4F54 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		A4AFDA9F27258B84006D4F54 /* ContactModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		A4AFDAA027258B84006D4F54 /* MailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		A4AFDAA827258E92006D4F54 /* mail.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mail.txt; sourceTree = "<group>"; };
 		A4AFDAA927258E92006D4F54 /* settings.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = settings.txt; sourceTree = "<group>"; };
 		A4AFDAAA27258E92006D4F54 /* message.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = message.txt; sourceTree = "<group>"; };
 		A4AFDAB327259360006D4F54 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A4AFDAB5272593B9006D4F54 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		A4AFDAB5272593B9006D4F54 /* ConfigurationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationModel.swift; sourceTree = "<group>"; };
 		A4E696BB272C22AA00623DA8 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		A4E696BD272CE39500623DA8 /* 1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1024.png; path = AppIcons/Assets.xcassets/AppIcon.appiconset/1024.png; sourceTree = "<group>"; };
 		A4F8A52527A181EF00CA367B /* notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = notes.txt; sourceTree = "<group>"; };
@@ -76,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				A4F8A52527A181EF00CA367B /* notes.txt */,
+				A439D83F2B07DFAE00F69C2B /* Updates.txt */,
 				A4AFDAB327259360006D4F54 /* README.md */,
 				A43908BC27FB25B6002174E0 /* README.pdf */,
 				A4AFDAA927258E92006D4F54 /* settings.txt */,
@@ -109,8 +113,8 @@
 				A45051142727B0EA004FC466 /* AddressView.swift */,
 				A49C8F192736C40E001E55A3 /* NoteView.swift */,
 				A4E696BB272C22AA00623DA8 /* ConfigView.swift */,
-				A4AFDAB5272593B9006D4F54 /* Configuration.swift */,
-				A4AFDA9F27258B84006D4F54 /* Contact.swift */,
+				A4AFDAB5272593B9006D4F54 /* ConfigurationModel.swift */,
+				A4AFDA9F27258B84006D4F54 /* ContactModel.swift */,
 				A4AFDAA027258B84006D4F54 /* MailView.swift */,
 				A4AFDA9D27258B84006D4F54 /* MessageView.swift */,
 				A4AFDA9E27258B84006D4F54 /* Substitutes.swift */,
@@ -160,6 +164,7 @@
 				TargetAttributes = {
 					A4AFDA8B2725193E006D4F54 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -186,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A439D8412B07E04C00F69C2B /* Updates.txt in Resources */,
 				A41079DC2726E216009D6833 /* VM Logo Color Thrive Tag.jpg in Resources */,
 				A4AFDAAD27258E92006D4F54 /* mail.txt in Resources */,
 				A4F8A52627A181EF00CA367B /* notes.txt in Resources */,
@@ -206,13 +212,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A439D8402B07DFAE00F69C2B /* Updates.txt in Sources */,
 				A4AFDAA127258B84006D4F54 /* MessageView.swift in Sources */,
 				A4AFDAA427258B84006D4F54 /* MailView.swift in Sources */,
 				A45051172727BCE0004FC466 /* ContactView.swift in Sources */,
-				A4AFDAB6272593B9006D4F54 /* Configuration.swift in Sources */,
+				A4AFDAB6272593B9006D4F54 /* ConfigurationModel.swift in Sources */,
 				A45051152727B0EA004FC466 /* AddressView.swift in Sources */,
 				A4AFDA922725193E006D4F54 /* ContentView.swift in Sources */,
-				A4AFDAA327258B84006D4F54 /* Contact.swift in Sources */,
+				A4AFDAA327258B84006D4F54 /* ContactModel.swift in Sources */,
 				A450510D2727A26F004FC466 /* HeaderView.swift in Sources */,
 				A4AFDA902725193E006D4F54 /* Kiosk_ContactsApp.swift in Sources */,
 				A4E696BC272C22AA00623DA8 /* ConfigView.swift in Sources */,
@@ -346,9 +353,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Kiosk Contacts/Kiosk ContactsDebug.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_ASSET_PATHS = "\"Kiosk Contacts/Preview Content\"";
 				DEVELOPMENT_TEAM = J27945M9KG;
 				ENABLE_PREVIEWS = YES;
@@ -367,10 +375,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.randix.Kiosk-Contacts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -381,8 +390,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_ASSET_PATHS = "\"Kiosk Contacts/Preview Content\"";
 				DEVELOPMENT_TEAM = J27945M9KG;
 				ENABLE_PREVIEWS = YES;
@@ -401,7 +411,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.randix.Kiosk-Contacts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

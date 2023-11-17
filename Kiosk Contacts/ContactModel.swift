@@ -1,5 +1,5 @@
 //
-//  Data.swift
+//  ContactModel.swift
 //  kiosk
 //
 //  Created by Rand Dow on 10/22/21.
@@ -66,7 +66,7 @@ class ContactModel: ObservableObject {
                   organization, phone, mail, note] {
             var fixed = f.trimmingCharacters(in: .whitespaces)
             if fixed.contains(",") {
-                fixed = "\(fixed)"          // ?? RHD: what is this?  S.B.? "\"\(fixed)\""
+                fixed = "\(fixed)"
             }
             csvline = appendfield(first, csvline, fixed)
             first = false

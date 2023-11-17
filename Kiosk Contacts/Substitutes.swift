@@ -9,8 +9,8 @@ import Foundation
 
 class Substitute {
     
-    let config = Configuration.shared
-    let contact = Contact.shared
+    let config = ConfigurationModel.shared
+    let contact = ContactModel.shared
     
     func substitute(_ text: String) -> String {
         var replaced = text

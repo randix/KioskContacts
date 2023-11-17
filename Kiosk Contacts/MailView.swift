@@ -14,8 +14,8 @@ struct MailView: UIViewControllerRepresentable {
     @Environment(\.presentationMode) var presentation
     @Binding var result: Result<MFMailComposeResult, Error>?
     
-    @ObservedObject var contact = Contact.shared
-    @ObservedObject var config = Configuration.shared
+    @ObservedObject var contact = ContactModel.shared
+    @ObservedObject var config = ConfigurationModel.shared
     
     class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
         
@@ -39,7 +39,7 @@ struct MailView: UIViewControllerRepresentable {
                 print("Mail failed")
             case MFMailComposeResult.sent.rawValue:
                 print("Mail was sent")
-                Contact.shared.clear()
+                ContactModel.shared.clear()
             default:
                 break;
             }

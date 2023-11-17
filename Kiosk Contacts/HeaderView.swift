@@ -11,7 +11,7 @@ struct HeaderView: View {
     
     @Binding var showConfig: Bool
     
-    @ObservedObject var config = Configuration.shared
+    @ObservedObject var config = ConfigurationModel.shared
     // iPhone sizes
     @State var iconWidth = CGFloat(350)
     @State var iconHeight = CGFloat(60)
