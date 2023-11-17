@@ -1,2 +1,15 @@
 only store fields that are configured
 add "general field"
+
+How to convert README.md to README.pdf:
+---------------------------------------
+  ~/bin/iCloud/Markdown.pl README.md > README.html
+  open README.html in Safari
+  File->Print
+    deselect "Print Headers and Footers"
+    Select PDF
+      navigate to the source to KioskContacts
+      change file name to README.pdf
+      save
+    
+

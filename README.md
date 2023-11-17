@@ -4,7 +4,7 @@
 
 #### Introduction
 
-This app is designed to work on a kiosk tablet at at an event. It presents a configurable form to enter contact information. It can be run in the iOS "kiosk" mode on an iPhone or iPad.
+This app is designed to work on a kiosk tablet at an event. It presents a configurable form to enter contact information. It can be run in the iOS "kiosk" mode (Guided Access) on an iPhone or iPad.
 
 The kiosk operator invites a booth visitor to enter his or her contact information to share with the kiosk operator for the purpose of getting further information. *Kiosk Contacts* can be configured to send a mail or message immediately to the vistor.
 
@@ -12,13 +12,13 @@ The app saves collected information to a file and initiates the sending of a wel
 
 #### Requirements
 
-The minimum OS is:
+The OS requirement is:
 
 - iOS or iPadOS 14.0 or greater
 
 #### Access to Data
 
-This app presents a simple, configurable contact information form, when the submit button is tapped, it saves the information in the form to a file in the app's documents directory. The collected information is not verified. The data is a comma separated values file named *contacts.csv*. Modern spreadsheet applications, i.e. MS Excel or Apple Numbers, can open this file for further processing.
+This app presents a simple, configurable contact information form, when the **Submit** button is tapped, it saves the information in the form to a file in the app's documents directory. The collected information is not verified. The data is a comma separated values file named *contacts.csv*. Modern spreadsheet applications, i.e. Google Docs, MS Excel or Apple Numbers, can open this file for further processing.
 
 To find the documents for the *Kiosk Contacts* app, use the iOS *Files* app. Open the *Files* app, navigate to *On My iPad* on an iPad or *On My iPhone* on an iPhone. There will be a folder for *Kiosk Contacts*. Tap on *Kiosk Contacts* and you will see a display of the files there. The folder is only present after the app has been started at least once.
 
@@ -35,25 +35,25 @@ The following files are described in detail below.
 
 ##### Files App
 
-The iOS *File*s app can be used to examine or share a file. Tap and hold on a file for a pop-up menu of actions, among which are *Quick Look* and *Share*. Use *Share* to share a file with, for example, *Mail*. Using this, you can send the *contacts.csv* file to another computer for processing.
+The iOS *Files* app can be used to examine or share a file. Tap and hold on a file for a pop-up menu of actions, among which are *Quick Look* and *Share*. Use *Share* to share a file with, for example, *Mail*. Using this, you can send the *contacts.csv* file to another computer for processing.
 
 ##### Kiosk Contacts Files
 
-The files  in the *Kiosk Contacts* folder contain either configuration information, i.e. *settings.txt*, or text and fields for the subject and body of the mail message, *mail.txt*, or of the iMessage message, *message.txt*. The fields will be replaced by either configuration information or by fields from the form data when a mail or a message is sent.. This is described below in the *Substitions* section below.
+The files  in the *Kiosk Contacts* folder contain either configuration information, i.e. *settings.txt*, or text and fields for the subject and body of the mail message, *mail.txt*, or of the iMessage message, *message.txt*. The fields will be replaced by either configuration information or by fields from the form data when a mail or a message is sent. This is described below in the *Substitions* section below.
 
 The files in the *Kiosk Contacts* folder are:
 
 ###### README
 
-This is this document which describes and informs the usage of *Kiosk Contacts*. This file is there in both text ".md" and ".pdf" formats. You are reading this file.
+This file is a document which describes and informs the usage of *Kiosk Contacts*. This file is there in both text, *README.md*, and PDF, *README.pdf*, formats. You are reading this file.
 
 ###### contacts
 
-This file *contacts.csv* contains the saved contacts from tapping the **Submit** button. Apple *Numbers* can directly open this file or this file can be shared to be opened and processed on another device, where it might be processed with, for example, MS Excel.
+The file *contacts.csv* contains the saved contacts from tapping the **Submit** button. Apple *Numbers* can directly open this file or this file can be shared to be opened and processed on another device, where it might be processed with, for example, *MS Excel*.
 
 ###### mail
 
-This file *mail.txt* contains the "from:" and "subject:" fields and the body of a mail message to be sent to the contact when the submit button is tapped. This file may be edited and fields entered to be replaced by text from the contact form.
+The file *mail.txt* contains the "from:" and "subject:" fields and the body of a mail message to be sent to the contact when the **Submit** button is tapped. This file may be edited and fields entered to be replaced by text from the contact form.
 
 The "from:" address must be in the list of possible sender addresses on the device to be used, otherwise *Mail* will use a From: address present on the device.
 
@@ -63,7 +63,7 @@ The "---" must be left in place as a separator line.
 
 ###### message
 
-This file *message.txt* contains the body of an iMessage to be sent to the contact when the submit button is tapped, if so configured. This file may be edited and fields entered to be replaced by text from the contact form.
+The file *message.txt* contains the body of an iMessage to be sent to the contact when the **Submit** button is tapped, if so configured. This file may be edited and fields entered to be replaced by text from the contact form.
 
 ###### 1024
 
@@ -71,13 +71,13 @@ This file *message.txt* contains the body of an iMessage to be sent to the conta
 
 ###### VM Logo Color Thrive Tag
 
-This is another sample image file, *VM Logo Color Thrive Tag.jpg*.
+This is another sample image file, *VM Logo Color Thrive Tag.jpg*. Images with transparant backgrounds will probably not display well in "Dark Mode". This can be set on the device in **Settings** -> **Display & Brightness**, turn off *Automatic* and select *Light*.
 
 ###### settings
 
-This file *settings.txt* contains the settings for the app. You can edit this with any text editor app or inside the *Kiosk Contacts* app.
+The file *settings.txt* contains the settings for the app. You can edit this with any text editor app or inside the *Kiosk Contacts* app.  You could also share this file with a computer via mail and edit the file, then send it back, and from the *Mail* app, save it back to Files -> On My iPad -> Kiosk Contacts.
 
-These settings may be edited "in app". Tap on the icon/logo image four times and a view will be opened in which the configuration files may be read. There you must enter the pin which is set in the *settings.txt* file.
+These settings may be edited "in app". Tap on the icon/logo image four times and a view will be opened in which the configuration files may be read. There you must enter the pin which is set in the *settings.txt* file. You may remind yourself of the pin by examining this file with *Files*.
 
 The settings here should be changed appropriately:
 
@@ -113,7 +113,7 @@ The settings here should be changed appropriately:
 
 - title=1
   
-  Set to 1 to collect a title, such as "Mr.", "Mrs.", etc.
+  Set to 1 to collect a title, such as "Mr.", "Mrs.", "Dr.", etc.
 
 - middlename=0
   
@@ -153,7 +153,7 @@ The settings here should be changed appropriately:
 
 #### Substitions
 
-These fields may be included in the mail, message, and subject files and will be substituted with data from the settings or the forms.
+These fields may be included in the mail and/or message files and will be substituted with data from the settings or the forms.
 
 ##### Settings
 
@@ -164,34 +164,20 @@ These fields may be included in the mail, message, and subject files and will be
 ##### Contact Form Data
 
 - title
-
 - firstname
-
 - middlename
-
 - middleinitial
-
 - lastname
-
 - suffix
-
 - addressline1
-
 - addressline2
-
 - city
-
 - state
-
 - zipcode
-
 - country
-
 - organization
 - note
-
 - mailaddress
-
 - phone
 
 #### Editing the Configuration Files
@@ -213,11 +199,11 @@ You may also copy the files to a computer, edit them there, and then copy back, 
 
 iOS supports a kiosk mode, allowing access only to a single application.  You may use this to lock access to only *Kiosk Contacts*.
 
-On iOS 15, this is activated under:
+On iOS 15-17, this is activated under:
 
 **Settings** -> **Accessibility** -> **Guided Access**
 
-There you may switch **Guided Access** to on and set up the Passcode Settings. Read the instructions there on how to start and stop it.
+There you may switch **Guided Access** to **on** and set up the Passcode Settings. Read the instructions there on how to start and stop it.
 
 #### Font Size
 
@@ -227,7 +213,7 @@ This is activated under:
 
 **Settings** -> **Accessibility** -> **Display & Text Size** -> **Larger Text** 
 
-There you may switch **Larger Accessibility Sizes** to on and then adjust the size of the text with the slider bar below. Try several positions on the slider bar with viewing the Kiosk Contacts app and decide on the best size.
+There you may switch **Larger Accessibility Sizes** to **on** and then adjust the size of the text with the slider bar below. Try several positions on the slider bar with viewing the Kiosk Contacts app and decide on the best size.
 
 #### Privacy
 
@@ -241,4 +227,4 @@ Please contact  [Rand](mailto:rand@randix.net) or see the [documentation page](h
 
 [Developer Home Page](https://randix.github.io/)
 
-<font size=2>© 2021-2022 Randix LLC</font>
+<font size=2>© 2021-2023 Randix LLC</font>
