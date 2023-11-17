@@ -7,10 +7,10 @@
 
 import Foundation
 
-class Contact: ObservableObject {
+class ContactModel: ObservableObject {
     
     private init() {}
-    static let shared = Contact()
+    static let shared = ContactModel()
     
     let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     let contactsFile = "contacts.csv"
@@ -66,7 +66,7 @@ class Contact: ObservableObject {
                   organization, phone, mail, note] {
             var fixed = f.trimmingCharacters(in: .whitespaces)
             if fixed.contains(",") {
-                fixed = "\(fixed)"
+                fixed = "\(fixed)"          // ?? RHD: what is this?  S.B.? "\"\(fixed)\""
             }
             csvline = appendfield(first, csvline, fixed)
             first = false

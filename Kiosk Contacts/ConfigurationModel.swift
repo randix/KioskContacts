@@ -15,10 +15,10 @@ enum SizeClass {
     case iPad
 }
 
-class Configuration: ObservableObject {
+class ConfigurationModel: ObservableObject {
     
     private init() { }
-    static let shared = Configuration()
+    static let shared = ConfigurationModel()
     
     var iPad = UIScreen.main.bounds.width > 600
     
@@ -225,6 +225,7 @@ class Configuration: ObservableObject {
         copyfileToUserDocumentDirectory(message)
         copyfileToUserDocumentDirectory("README.md")
         copyfileToUserDocumentDirectory("README.pdf")
+        copyfileToUserDocumentDirectory("Updates.pdf")
         
         copyfileToUserDocumentDirectory("1024.png")
         copyfileToUserDocumentDirectory("VM Logo Color Thrive Tag.jpg")

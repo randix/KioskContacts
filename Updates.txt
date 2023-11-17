@@ -1,0 +1,8 @@
+//
+//  Updates.c
+//  Kiosk Contacts
+//
+//  Created by Rand Dow on 11/17/23.
+//
+
+#include <stdio.h>
