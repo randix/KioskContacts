@@ -8,3 +8,4 @@ Version 1.3.22
 Version 1.3.23
  - Disable autocorrection on the fields
  - Fix clearing of form if mail or message cancelled
+ - Rename README.pdf to Setup.pdf

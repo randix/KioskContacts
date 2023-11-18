@@ -223,8 +223,7 @@ class ConfigurationModel: ObservableObject {
         copyfileToUserDocumentDirectory(settings)
         copyfileToUserDocumentDirectory(mail)
         copyfileToUserDocumentDirectory(message)
-        copyfileToUserDocumentDirectory("README.md")
-        copyfileToUserDocumentDirectory("README.pdf")
+        copyfileToUserDocumentDirectory("Setup.pdf")
         copyfileToUserDocumentDirectory("Updates.txt")
         
         copyfileToUserDocumentDirectory("1024.png")

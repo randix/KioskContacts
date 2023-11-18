@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A41079DC2726E216009D6833 /* VM Logo Color Thrive Tag.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A41079DB2726E216009D6833 /* VM Logo Color Thrive Tag.jpg */; };
-		A43908BD27FB25B6002174E0 /* README.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A43908BC27FB25B6002174E0 /* README.pdf */; };
 		A439D8402B07DFAE00F69C2B /* Updates.txt in Sources */ = {isa = PBXBuildFile; fileRef = A439D83F2B07DFAE00F69C2B /* Updates.txt */; };
 		A439D8412B07E04C00F69C2B /* Updates.txt in Resources */ = {isa = PBXBuildFile; fileRef = A439D83F2B07DFAE00F69C2B /* Updates.txt */; };
+		A439D8432B08806200F69C2B /* Setup.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A439D8422B08806200F69C2B /* Setup.pdf */; };
 		A450510D2727A26F004FC466 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450510C2727A26F004FC466 /* HeaderView.swift */; };
 		A450510F2727A533004FC466 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450510E2727A533004FC466 /* NameView.swift */; };
 		A45051152727B0EA004FC466 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45051142727B0EA004FC466 /* AddressView.swift */; };
@@ -27,7 +27,6 @@
 		A4AFDAAD27258E92006D4F54 /* mail.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAA827258E92006D4F54 /* mail.txt */; };
 		A4AFDAAE27258E92006D4F54 /* settings.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAA927258E92006D4F54 /* settings.txt */; };
 		A4AFDAAF27258E92006D4F54 /* message.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAAA27258E92006D4F54 /* message.txt */; };
-		A4AFDAB427259360006D4F54 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A4AFDAB327259360006D4F54 /* README.md */; };
 		A4AFDAB6272593B9006D4F54 /* ConfigurationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFDAB5272593B9006D4F54 /* ConfigurationModel.swift */; };
 		A4E696BC272C22AA00623DA8 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E696BB272C22AA00623DA8 /* ConfigView.swift */; };
 		A4E696BE272CE39500623DA8 /* 1024.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E696BD272CE39500623DA8 /* 1024.png */; };
@@ -36,9 +35,9 @@
 
 /* Begin PBXFileReference section */
 		A41079DB2726E216009D6833 /* VM Logo Color Thrive Tag.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "VM Logo Color Thrive Tag.jpg"; sourceTree = "<group>"; };
-		A43908BC27FB25B6002174E0 /* README.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = README.pdf; sourceTree = "<group>"; };
 		A43908BE28063403002174E0 /* Kiosk ContactsDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Kiosk ContactsDebug.entitlements"; sourceTree = "<group>"; };
 		A439D83F2B07DFAE00F69C2B /* Updates.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Updates.txt; sourceTree = "<group>"; };
+		A439D8422B08806200F69C2B /* Setup.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Setup.pdf; sourceTree = "<group>"; };
 		A450510C2727A26F004FC466 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		A450510E2727A533004FC466 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 		A45051142727B0EA004FC466 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
@@ -57,7 +56,6 @@
 		A4AFDAA827258E92006D4F54 /* mail.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mail.txt; sourceTree = "<group>"; };
 		A4AFDAA927258E92006D4F54 /* settings.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = settings.txt; sourceTree = "<group>"; };
 		A4AFDAAA27258E92006D4F54 /* message.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = message.txt; sourceTree = "<group>"; };
-		A4AFDAB327259360006D4F54 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A4AFDAB5272593B9006D4F54 /* ConfigurationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationModel.swift; sourceTree = "<group>"; };
 		A4E696BB272C22AA00623DA8 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		A4E696BD272CE39500623DA8 /* 1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1024.png; path = AppIcons/Assets.xcassets/AppIcon.appiconset/1024.png; sourceTree = "<group>"; };
@@ -78,10 +76,9 @@
 		A4AFDA832725193E006D4F54 = {
 			isa = PBXGroup;
 			children = (
+				A439D8422B08806200F69C2B /* Setup.pdf */,
 				A4F8A52527A181EF00CA367B /* notes.txt */,
 				A439D83F2B07DFAE00F69C2B /* Updates.txt */,
-				A4AFDAB327259360006D4F54 /* README.md */,
-				A43908BC27FB25B6002174E0 /* README.pdf */,
 				A4AFDAA927258E92006D4F54 /* settings.txt */,
 				A4AFDAA827258E92006D4F54 /* mail.txt */,
 				A4AFDAAA27258E92006D4F54 /* message.txt */,
@@ -106,8 +103,8 @@
 				A43908BE28063403002174E0 /* Kiosk ContactsDebug.entitlements */,
 				A488CD9927298F4C00F1CD3E /* Kiosk-Contacts-Info.plist */,
 				A4AFDA8F2725193E006D4F54 /* Kiosk_ContactsApp.swift */,
-				A4AFDA912725193E006D4F54 /* ContentView.swift */,
 				A450510C2727A26F004FC466 /* HeaderView.swift */,
+				A4AFDA912725193E006D4F54 /* ContentView.swift */,
 				A450510E2727A533004FC466 /* NameView.swift */,
 				A45051162727BCE0004FC466 /* ContactView.swift */,
 				A45051142727B0EA004FC466 /* AddressView.swift */,
@@ -195,12 +192,11 @@
 				A41079DC2726E216009D6833 /* VM Logo Color Thrive Tag.jpg in Resources */,
 				A4AFDAAD27258E92006D4F54 /* mail.txt in Resources */,
 				A4F8A52627A181EF00CA367B /* notes.txt in Resources */,
+				A439D8432B08806200F69C2B /* Setup.pdf in Resources */,
 				A4AFDAAF27258E92006D4F54 /* message.txt in Resources */,
-				A43908BD27FB25B6002174E0 /* README.pdf in Resources */,
 				A4E696BE272CE39500623DA8 /* 1024.png in Resources */,
 				A4AFDA972725193F006D4F54 /* Preview Assets.xcassets in Resources */,
 				A4AFDA942725193F006D4F54 /* Assets.xcassets in Resources */,
-				A4AFDAB427259360006D4F54 /* README.md in Resources */,
 				A4AFDAAE27258E92006D4F54 /* settings.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
