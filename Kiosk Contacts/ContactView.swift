@@ -32,6 +32,7 @@ struct ContactView: View {
                         .minimumScaleFactor(0.4)
                         .keyboardType(.emailAddress)
                         .autocapitalization(UITextAutocapitalizationType.none)
+                        .disableAutocorrection(true)
                     Spacer()
                 }
                 .frame(width:config.width)
@@ -61,6 +62,8 @@ struct ContactView: View {
                         .frame(width:leadingOrg, alignment: .trailing)
                         //.background(Color.yellow)
                     TextField("Organization", text: $contact.organization)
+                        .autocapitalization(UITextAutocapitalizationType.none)
+                        .disableAutocorrection(true)
                         .frame(width:config.width-leadingOrg)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0).lineLimit(1).minimumScaleFactor(0.4)

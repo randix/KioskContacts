@@ -21,6 +21,7 @@ struct NoteView: View {
                     Text("Note")
                         .frame(width: config.text, alignment: .trailing)
                     TextField("note", text: $contact.note)
+                        .disableAutocorrection(true)
                         .frame(width:config.width-config.text)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 0)

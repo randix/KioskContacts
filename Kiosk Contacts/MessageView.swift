@@ -38,10 +38,10 @@ struct MessageView: UIViewControllerRepresentable {
                 print("Message failed")
             case MessageComposeResult.sent.rawValue:
                 print("Message was sent")
-                ContactModel.shared.clear()
             default:
                 break;
             }
+            ContactModel.shared.clear()
             
             defer {
                 $presentation.wrappedValue.dismiss()

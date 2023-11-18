@@ -39,10 +39,10 @@ struct MailView: UIViewControllerRepresentable {
                 print("Mail failed")
             case MFMailComposeResult.sent.rawValue:
                 print("Mail was sent")
-                ContactModel.shared.clear()
             default:
                 break;
             }
+            ContactModel.shared.clear()
             
             defer {
                 $presentation.wrappedValue.dismiss()
