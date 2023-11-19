@@ -64,12 +64,11 @@ class ConfigurationModel: ObservableObject {
     @Published var country = false
 
     @Published var organization = false
-    @Published var note = true
-
     @Published var mailaddress = true
-    @Published var mailsend = false
-    
     @Published var phone = true
+    @Published var note = true
+    
+    @Published var mailsend = false
     @Published var messagesend = false
     
     var appName = ""

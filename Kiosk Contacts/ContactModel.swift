@@ -59,16 +59,101 @@ class ContactModel: ObservableObject {
     func add() {
         let contactsUrl = docDir.appendingPathComponent(contactsFile)
         
+        var header = ""
         var csvline = ""
         var first = true
-        for f in [title, firstname, middlename, middleinitial, lastname, suffix,
-                  addressline1, addressline2, city, state, zipcode,country,
-                  organization, phone, mail, note] {
-            var fixed = f.trimmingCharacters(in: .whitespaces)
-            if fixed.contains(",") {
-                fixed = "\(fixed)"
-            }
-            csvline = appendfield(first, csvline, fixed)
+        
+//        for f in [title, firstname, middlename, middleinitial, lastname, suffix,
+//                  addressline1, addressline2, city, state, zipcode,country,
+//                  organization, phone, mail, note] {
+//            var fixed = f.trimmingCharacters(in: .whitespaces)
+//            if fixed.contains(",") {
+//                fixed = "\(fixed)"
+//            }
+//            csvline = appendfield(first, csvline, fixed)
+//            first = false
+//        }
+        
+        if ConfigurationModel.shared.title {
+            header += "title,"
+            csvline = appendfield(first, csvline, title.trimmingCharacters(in: .whitespaces))
+            first = false
+        }
+        if ConfigurationModel.shared.firstname {
+            header += "firstname,"
+            csvline = appendfield(first, csvline, firstname.trimmingCharacters(in: .whitespaces))
+            first = false
+        }
+        if ConfigurationModel.shared.middlename {
+            header += "middlename,"
+            csvline = appendfield(first, csvline, middlename.trimmingCharacters(in: .whitespaces))
+            first = false
+        }
+        if ConfigurationModel.shared.middleinitial {
+            header += "middleinitial,"
+            csvline = appendfield(first, csvline, middleinitial.trimmingCharacters(in: .whitespaces))
+            first = false
+        }
+        if ConfigurationModel.shared.lastname {
+            header += "lastname,"
+            csvline = appendfield(first, csvline, lastname.trimmingCharacters(in: .whitespaces))
+            first = false
+        }
+        if ConfigurationModel.shared.suffix {
+            header += "suffix,"
+            csvline = appendfield(first, csvline, suffix.trimmingCharacters(in: .whitespaces))
+            first = false
+        }
+        
+        if ConfigurationModel.shared.addressline1 {
+            header += "addressline1,"
+            csvline = appendfield(first, csvline, addressline1.trimmingCharacters(in: .whitespaces))
+            first = false
+        }
+        if ConfigurationModel.shared.addressline2 {
+            header += "addressline2,"
+            csvline = appendfield(first, csvline, addressline2.trimmingCharacters(in: .whitespaces))
+            first = false
+        }
+        if ConfigurationModel.shared.city {
+            header += "city,"
+            csvline = appendfield(first, csvline, city.trimmingCharacters(in: .whitespaces))
+            first = false
+        }
+        if ConfigurationModel.shared.state {
+            header += "state,"
+            csvline = appendfield(first, csvline, state.trimmingCharacters(in: .whitespaces))
+            first = false
+        }
+        if ConfigurationModel.shared.zipcode {
+            header += "zipcode,"
+            csvline = appendfield(first, csvline, zipcode.trimmingCharacters(in: .whitespaces))
+            first = false
+        }
+        if ConfigurationModel.shared.country {
+            header += "country,"
+            csvline = appendfield(first, csvline, country.trimmingCharacters(in: .whitespaces))
+            first = false
+        }
+        
+        if ConfigurationModel.shared.organization {
+            header += "organization,"
+            csvline = appendfield(first, csvline, organization.trimmingCharacters(in: .whitespaces))
+            first = false
+        }
+        if ConfigurationModel.shared.phone {
+            header += "phone,"
+            csvline = appendfield(first, csvline, phone.trimmingCharacters(in: .whitespaces))
+            first = false
+        }
+        if ConfigurationModel.shared.mailaddress {
+            header += "mail,"
+            csvline = appendfield(first, csvline, mail.trimmingCharacters(in: .whitespaces))
+            first = false
+        }
+        if ConfigurationModel.shared.note {
+            header += "note,"
+            csvline = appendfield(first, csvline, note.trimmingCharacters(in: .whitespaces))
             first = false
         }
         
@@ -76,6 +161,7 @@ class ContactModel: ObservableObject {
         let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        header += "date\n"
         csvline += ",\(dateFormatter.string(from: date))\n"
         
         do {
@@ -85,7 +171,8 @@ class ContactModel: ObservableObject {
                 fileHandle.write(Data(csvline.utf8))
                 fileHandle.closeFile()
             } else {
-                let header = "title,firstname,middlename,middleinitial,lastname,suffix,addressline1,addressline2,city,state,zipcode,country,organization,phone,mail,note,date\n" + csvline
+//                let header = "title,firstname,middlename,middleinitial,lastname,suffix,addressline1,addressline2,city,state,zipcode,country,organization,phone,mail,note,date\n" + csvline
+                header += csvline
                 try header.write(to: contactsUrl, atomically: true, encoding: .utf8)
             }
         } catch {
