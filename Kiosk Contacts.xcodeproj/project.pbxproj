@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A41079DC2726E216009D6833 /* VM Logo Color Thrive Tag.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A41079DB2726E216009D6833 /* VM Logo Color Thrive Tag.jpg */; };
-		A439D8402B07DFAE00F69C2B /* Updates.txt in Sources */ = {isa = PBXBuildFile; fileRef = A439D83F2B07DFAE00F69C2B /* Updates.txt */; };
 		A439D8412B07E04C00F69C2B /* Updates.txt in Resources */ = {isa = PBXBuildFile; fileRef = A439D83F2B07DFAE00F69C2B /* Updates.txt */; };
 		A439D8432B08806200F69C2B /* Setup.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A439D8422B08806200F69C2B /* Setup.pdf */; };
 		A450510D2727A26F004FC466 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450510C2727A26F004FC466 /* HeaderView.swift */; };
@@ -210,7 +209,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A439D8402B07DFAE00F69C2B /* Updates.txt in Sources */,
 				A4AFDAA127258B84006D4F54 /* MessageView.swift in Sources */,
 				A4AFDAA427258B84006D4F54 /* MailView.swift in Sources */,
 				A45051172727BCE0004FC466 /* ContactView.swift in Sources */,
