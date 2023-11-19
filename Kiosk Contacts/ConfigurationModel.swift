@@ -28,6 +28,8 @@ class ConfigurationModel: ObservableObject {
     
     @Published var setupCount = 0
     
+    var configChanged = false
+    
     let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
    
     let settings = "settings.txt"

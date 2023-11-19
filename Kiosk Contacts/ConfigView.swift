@@ -121,6 +121,7 @@ struct ConfigView: View {
                     Spacer().frame(width:40)
                     Button(action: {
                         saveFile()
+                        config.configChanged = true
                         config.readConfig()
                         modified = false
                     }) {

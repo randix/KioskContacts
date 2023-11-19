@@ -161,17 +161,23 @@ class ContactModel: ObservableObject {
         csvline += ",\(dateFormatter.string(from: date))\n"
         
         do {
-            if FileManager.default.fileExists(atPath: contactsUrl.path) {
-                let fileHandle = try FileHandle(forWritingTo: contactsUrl)
-                fileHandle.seekToEndOfFile()
-                fileHandle.write(Data(csvline.utf8))
-                fileHandle.closeFile()
-            } else {
-                header += csvline
+            let exists = FileManager.default.fileExists(atPath: contactsUrl.path)
+            if !exists {
                 try header.write(to: contactsUrl, atomically: true, encoding: .utf8)
+                ConfigurationModel.shared.configChanged = false
             }
+            let fileHandle = try FileHandle(forWritingTo: contactsUrl)
+            fileHandle.seekToEndOfFile()
+            if ConfigurationModel.shared.configChanged {
+                fileHandle.write(Data(header.utf8))
+                ConfigurationModel.shared.configChanged = false
+                fileHandle.write(Data(csvline.utf8))
+            } else {
+                fileHandle.write(Data(csvline.utf8))
+            }
+            fileHandle.closeFile()
         } catch {
-            print(error.localizedDescription)
+            print("Error: ", error.localizedDescription)
         }
     }
     
