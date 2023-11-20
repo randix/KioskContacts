@@ -1,1 +1,2 @@
-Someday: update to min iOS 14, and set @FocusState on editor pin
+update to min iOS 15, and set @FocusState on editor pin
+add "reply-to:" field to reduce the issue of device mail addresses
